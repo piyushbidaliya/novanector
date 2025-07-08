@@ -13,6 +13,11 @@ import homeabout1 from '../assets/homeabout1.png'
 import homeabout2 from '../assets/homeabout2.png'
 import { FaCheckCircle } from "react-icons/fa";
 import CourseCard from '../component/CourseCard';
+import { PiCodeBold } from "react-icons/pi";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { FiDatabase } from "react-icons/fi";
+import { LiaBullhornSolid } from "react-icons/lia";
+import { RiContactsBook2Line } from "react-icons/ri";
 
 
 const onlineStudent = [
@@ -24,14 +29,14 @@ const onlineStudent = [
 ]
 
 const categories = [
-    { icon: "icon", title: "Graphic Design", course: "30"},
-    { icon: "icon", title: "Web Development", course: "20"},
-    { icon: "icon", title: "Data Science", course: "10"},
-    { icon: "icon", title: "Data Science", course: "25"},
-    { icon: "icon", title: "Data Science", course: "15"},
-    { icon: "icon", title: "Data Science", course: "10"},
-    { icon: "icon", title: "Data Science", course: "25"},
-    { icon: "icon", title: "Data Science", course: "20"},
+    { icon: <RiContactsBook2Line />, title: "Graphic Design", course: "30"},
+    { icon: <PiCodeBold />, title: "Web Development", course: "20"},
+    { icon: <FiDatabase />, title: "Data Science", course: "10"},
+    { icon: <BsGraphUpArrow />, title: "Data Science", course: "25"},
+    { icon: <LiaBullhornSolid />, title: "Data Science", course: "15"},
+    { icon: <FiDatabase />, title: "Data Science", course: "10"},
+    { icon: <BsGraphUpArrow />, title: "Data Science", course: "25"},
+    { icon: <PiCodeBold />, title: "Data Science", course: "20"},
 
 ]
 const Heading = ({title})=>{
@@ -56,8 +61,8 @@ function Home() {
                         <h1 className='font-semibold text-[30px] md:text-[70px] leading-[100%] tracking-normal pb-6'>Empowering You to Learn, Grow, and Succeed</h1>
                         <p className='text-[#6F6F6F] font-normal text-[16px] md:text-[18px] leading-[100%] tracking-normal'>Unlock your potential with expert-led courses designed for every goal and learn at your own pace and gain the skills to succeed in career and life.</p>
                         <div className='pt-10 flex gap-2 md:gap-7 text-[16px] flex-wrap'>
-                            <button className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px]'>Enroll Now <FaArrowRightLong className='inline ml-2' /></button>
-                            <button className='text-[#296AD2] border-[#296AD2] border py-3 px-6 rounded-[4px]'>Explore Courses <FaArrowRightLong className='inline ml-2' /></button>
+                            <button className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] cursor-pointer'>Enroll Now <FaArrowRightLong className='inline ml-2' /></button>
+                            <button className='text-[#296AD2] border-[#296AD2] border py-3 px-6 rounded-[4px] cursor-pointer'>Explore Courses <FaArrowRightLong className='inline ml-2' /></button>
                         </div>
                     </div>
 
@@ -117,7 +122,7 @@ function Home() {
             </div>
 
             {/* top Categories */}
-            <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 bg-[#F4FAFF] h-full'>
+            <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 h-full'>
                 <div className='flex justify-center flex-col items-center'>
                     <Heading title="Top Categories"/>
                     <h1 className='font-semibold text-[26px] md:text-[48px] '>Top Picks for you</h1>
@@ -125,8 +130,8 @@ function Home() {
 
                 <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2'>
                     {categories.map((data)=>(
-                    <div className='flex gap-2 hover:bg-[#296AD2] py-5 px-7.5 rounded-[8px] border border-[#E3E3E3] cursor-pointer hover:text-white'>
-                        <div className='bg-white p-2 rounded-full text-black'>
+                    <div className='flex gap-3 hover:bg-[#296AD2] py-5 px-7.5 rounded-[8px] items-center border border-[#E3E3E3] cursor-pointer hover:text-white'>
+                        <div className='bg-[#EFEFEF] p-2 rounded-full text-black h-fit'>
                             {data.icon}
                         </div>
                         <div className=''>
@@ -139,10 +144,10 @@ function Home() {
             </section>
 
             {/* about us */}
-            <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 bg-[#F4FAFF] flex lg:flex-row flex-col justify-between gap-8'>
+            <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 flex lg:flex-row flex-col justify-between gap-8'>
                 {/* image div */}
                 <div className='grid grid-cols-2 flex-1 gap-2'>
-                    <div className='flex justify-center items-center flex-col'>
+                    <div className='flex justify-center items-center flex-col bg-[#296AD2] text-white p-4'>
                         <p>50+</p>
                         <p>Online Courses</p>
                     </div>
@@ -152,7 +157,7 @@ function Home() {
                     <div>
                         <img src={homeabout1} alt="image" className='h-[241px]'/>
                     </div>
-                    <div className='font-normal text-[12px] md:text-[16px] flex justify-center items-center flex-col'>
+                    <div className='font-normal text-[12px] md:text-[16px] flex justify-center items-center flex-col bg-[#F2F8FF]'>
                         <p className='text-[#296AD2] '>10K+</p>
                         Online Students
                         <div className='flex flex-row'>
@@ -169,7 +174,7 @@ function Home() {
                 {/* content div */}
                 <div className='flex-1'>
                     <Heading title="About Us"/>
-                    <h1 className='font-medium text-[26px] md:text-[40px] leading-[100%] tracking-normal pb-6'>Creating A Community Of Life Long Learners.</h1>
+                    <h1 className='font-medium text-[26px] md:text-[40px] leading-[100%] tracking-normal py-6'>Creating A Community Of Life Long Learners.</h1>
                     <p className='text-[16px] text-[#6F6F6F] leading-[24px] pb-6'>Compellingly enhance equity investment strategies through efficient process improvements and innovation.Actualize mission-critical partnerships by leveraging integrated digital portals.Drive performance and collaboration with seamless, tech-enabled solutions.</p>
                     
                     <div className='flex gap-4 flex-wrap pb-6'>
@@ -222,7 +227,7 @@ function Home() {
             </div>
 
             {/* top courses */}
-            <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 bg-[#F4FAFF] h-full'>
+            <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 h-full'>
                 <div className='flex justify-center flex-col items-center'>
                     <Heading title="Top Courses"/>
                     <h1 className='font-semibold text-[26px] md:text-[48px] '>Explore Featured Courses</h1>
