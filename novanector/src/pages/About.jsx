@@ -47,7 +47,7 @@ const About = () => {
                 <button className='bg-[#296AD2] cursor-pointer text-white px-4 py-2 rounded-sm'>Learn More About Us <img className='inline-block' src="/assets/icons/arrow-right.png" alt="" /></button>
             </div>
         </div>
-        
+
 {/* OUR ACHIEVEMENTS */}
         <div className="bg-[#296AD2] py-8 grid mt-14 md:grid-cols-4 max-md:gap-8">
             <div className="text-center text-white md:border-r max-md:border-b max-md:pb-8 max-md:mx-6">
@@ -193,7 +193,7 @@ const About = () => {
 
 {/* TESTIMONIALS */}
 
-        <div className="grid md:grid-cols-2 mt-12">
+        <div className="grid md:grid-cols-2 mt-12 w-11/12 mx-auto">
             <div className="">
                 <img src="/assets/images/testimonials.png" alt="" className="w-full" />
             </div>
