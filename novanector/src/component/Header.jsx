@@ -9,7 +9,7 @@ function Header() {
     const [openMenu, setOpenMenu] = useState(false)
     return (
         <>
-            <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6'>
+            <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6 shadow-md'>
                 {/* logo image */}
                 <div className='w-[200px] h-auto'>
                     <img src={logo} alt="" />
@@ -26,20 +26,20 @@ function Header() {
                     </div>
                 </div>
                 <div className='lg:flex gap-4.5 hidden'>
-                    <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
+                    <div className='bg-[#EFEFEF] p-2.5 rounded-full cursor-pointer'>
                         <IoSearch className='w-5 h-5' />
                     </div>
-                    <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
+                    <Link to="/whislist" className='bg-[#EFEFEF] p-2.5 rounded-full'>
                         <FaRegHeart className='w-5 h-5' />
-                    </div>
-                    <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
+                    </Link>
+                    <div className='bg-[#EFEFEF] p-2.5 rounded-full cursor-pointer'>
                         <IoCartOutline className='w-5 h-5' />
                     </div>
                 </div>
                 {/* signup/login */}
                 <div className='hidden lg:flex gap-4.5 text-[16px]'>
-                    <button className='px-6 py-3 text-[#296AD2] rounded-[8px] border border-[#296AD2]'>Sign Up</button>
-                    <button className='px-6 py-3 bg-[#296AD2] text-white rounded-[8px]'>Login</button>
+                    <button className='px-6 py-3 text-[#296AD2] rounded-[8px] border border-[#296AD2] cursor-pointer'>Sign Up</button>
+                    <button className='px-6 py-3 bg-[#296AD2] text-white rounded-[8px] cursor-pointer'>Login</button>
                 </div>
 
                 <div className='lg:hidden block' >
@@ -92,9 +92,9 @@ function Header() {
                             <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
                                 <IoSearch className='w-5 h-5' />
                             </div>
-                            <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
+                            <Link to="/whislist" className='bg-[#EFEFEF] p-2.5 rounded-full'>
                                 <FaRegHeart className='w-5 h-5' />
-                            </div>
+                            </Link>
                             <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
                                 <IoCartOutline className='w-5 h-5' />
                             </div>

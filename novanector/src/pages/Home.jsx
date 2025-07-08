@@ -1,5 +1,4 @@
 import React from 'react'
-import { AiFillThunderbolt } from "react-icons/ai";
 import { FaArrowRightLong } from 'react-icons/fa6';
 import hero from '../assets/hero.png'
 import { PiCertificateBold } from "react-icons/pi";
@@ -18,7 +17,8 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { FiDatabase } from "react-icons/fi";
 import { LiaBullhornSolid } from "react-icons/lia";
 import { RiContactsBook2Line } from "react-icons/ri";
-
+import Heading from '../component/ThunderHeading';
+import courseDetails from '../assets/courseDetails'
 
 const onlineStudent = [
     { image: img1, alt: "student" },
@@ -39,18 +39,10 @@ const categories = [
     { icon: <PiCodeBold />, title: "Data Science", course: "20"},
 
 ]
-const Heading = ({title})=>{
-    return (
-        <div className='flex items-center gap-2 bg-[#FFFFFF] w-fit py-2 px-4 rounded-[50px]'>
-            <div className='bg-[#EBF5FF] p-2 rounded-full'>
-                <AiFillThunderbolt className='text-[#296AD2]' />
-            </div>
-            <p className='text-[14px]'>{title}</p>
-        </div>
-    )
-}
+
 
 function Home() {
+    const topSixCourses = courseDetails.slice(0, 6)
     return (
         <>
             {/* Hero */}
@@ -232,9 +224,11 @@ function Home() {
                     <Heading title="Top Courses"/>
                     <h1 className='font-semibold text-[26px] md:text-[48px] '>Explore Featured Courses</h1>
                 </div>
-                <div className='flex flex-wrap gap-6 justify-center'>
-                    <CourseCard/>
-                    <button className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] font-normal text-[16px]'>View All Courses <FaArrowRightLong className='inline ml-2'/></button>
+                <div className='grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 '>
+                    <CourseCard courseDetails={topSixCourses}/>
+                </div>
+                <div className='flex justify-center items-center py-4'>
+                    <button className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] font-normal text-[16px] cursor-pointer'>View All Courses <FaArrowRightLong className='inline ml-2'/></button>
                 </div>
             </section>
         </>

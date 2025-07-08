@@ -3,14 +3,15 @@ import { SlCalender } from "react-icons/sl";
 import { CgNotes } from "react-icons/cg";
 import { FaRegUser} from 'react-icons/fa6';
 import { IoIosStar, IoIosStarHalf } from "react-icons/io";
-import courseDetails from '../assets/courseDetails.js';
+import { useNavigate } from 'react-router-dom';
 
-
-function CourseCard() {
+function CourseCard({ courseDetails }) {
+  if (!Array.isArray(courseDetails)) return null;
+  const navigate = useNavigate()
   return (
     <>
-    {courseDetails.map((course)=>(
-    <div className='flex w-[30%] flex-col border border-[#E3E3E3] hover:border-[#1C4ED9] rounded-[8px]'>
+    {courseDetails.map((course, index)=>(
+    <div key={index} className='flex w-full flex-col border border-[#E3E3E3] hover:border-[#1C4ED9] rounded-[8px]'>
       <div className='relative'>
         <img src={courseimg1} alt="" className='rounded-t-[8px] w-full h-[250px]'/>
         <div className='bg-[#296AD2] p-2 flex gap-2 items-center text-white w-fit absolute top-2 right-0'>
@@ -44,7 +45,7 @@ function CourseCard() {
         <div className='flex justify-between pb-4 items-center'>
             <p className='font-medium text-[20px]'>Rs.{course.discountPrice} <span className='text-[16px] text-[#D51919] font-normal line-through'>Rs.{course.price}</span></p>
 
-            <button className='hover:bg-[#296AD2] border-[#296AD2] border text-[#296AD2] hover:text-white py-2 px-5 rounded-[4px] cursor-pointer'>View Details</button>
+            <button onClick={()=>navigate(`/courseDetailsOverview/${course.id}`)} className='hover:bg-[#296AD2] border-[#296AD2] border text-[#296AD2] hover:text-white py-2 px-5 rounded-[4px] cursor-pointer'>View Details</button>
         </div>
       </div>
     </div>
