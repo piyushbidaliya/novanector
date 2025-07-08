@@ -2,14 +2,14 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
-        <div className="w-5/6 mx-auto text-center">
+    <div className='py-12 px-4 md:px-12 lg:px-24'>
+        <div className="w-full text-center">
             <h1 className="text-4xl font-semibold">About Us</h1>
             <p className='text-[#6F6F6F] my-4'>At Novanectar Courses, we equip learners with practical, career-ready skills through flexible, expert-led training.Learn at your own pace, anytime and anywhere, and grow with confidence toward your professional goals.
             </p>
         </div>
 
-        <div className="my-8 mx-auto w-11/12 grid md:grid-cols-2 gap-12">
+        <div className="my-8 w-full grid md:grid-cols-2 gap-12">
             <div className="grid grid-cols-2 gap-4">
  
 
@@ -69,7 +69,7 @@ const About = () => {
         </div>
 
 {/* EXPLORE YOURSELF */}
-        <div className="w-11/12 mx-auto mt-14">
+        <div className="w-full mt-14">
             <div className="text-center my-8">
                 <span className="border rounded-full border-[#E3E3E3] inline-block py-2 px-4 ">
                     <img className='inline-block mr-2' src="/assets/icons/bolt.png" alt="" />
@@ -109,7 +109,7 @@ const About = () => {
         </div>
 
 {/* CORE PRINCIPLES */}
-        <div className="w-11/12 mx-auto mt-14">
+        <div className="w-full mx-auto mt-14">
             <div className="text-center my-8">
                 <span className="border rounded-full border-[#E3E3E3] inline-block py-2 px-4 ">
                     <img className='inline-block mr-2' src="/assets/icons/bolt.png" alt="" />
@@ -141,7 +141,7 @@ const About = () => {
         </div>
 
 {/* OUR COURSE INSTRUCTOR */}
-        <div className="w-11/12 mx-auto mt-14">
+        <div className="w-full mt-14">
             <div className="text-center my-8">
                 <span className="border rounded-full border-[#E3E3E3] inline-block py-2 px-4 ">
                     <img className='inline-block mr-2' src="/assets/icons/bolt.png" alt="" />
@@ -193,7 +193,7 @@ const About = () => {
 
 {/* TESTIMONIALS */}
 
-        <div className="grid md:grid-cols-2 mt-12 w-11/12 mx-auto">
+        <div className="grid md:grid-cols-2 mt-12 w-full">
             <div className="">
                 <img src="/assets/images/testimonials.png" alt="" className="w-full" />
             </div>
