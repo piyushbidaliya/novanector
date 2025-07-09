@@ -1,4 +1,3 @@
-import courseimg1 from '../assets/courseimg1.png'
 import { SlCalender } from "react-icons/sl";
 import { CgNotes } from "react-icons/cg";
 import { FaRegUser} from 'react-icons/fa6';
@@ -13,7 +12,7 @@ function CourseCard({ courseDetails }) {
     {courseDetails.map((course, index)=>(
     <div key={index} className='flex w-full flex-col border border-[#E3E3E3] hover:border-[#1C4ED9] rounded-[8px]'>
       <div className='relative'>
-        <img src={courseimg1} alt="" className='rounded-t-[8px] w-full h-[250px]'/>
+        <img src={course.image} alt="" className='rounded-t-[8px] w-full h-[250px]'/>
         <div className='bg-[#296AD2] p-2 flex gap-2 items-center text-white w-fit absolute top-2 right-0'>
             <SlCalender />
             <p className=''>{course.duration}</p>

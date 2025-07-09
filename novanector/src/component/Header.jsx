@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
-import { IoIosArrowDown, IoIosArrowForward, IoMdMenu } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp, IoMdMenu } from "react-icons/io";
 import { IoCartOutline, IoClose, IoSearch } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 
 function Header() {
     const [openMenu, setOpenMenu] = useState(false)
+    const [openPages, setOpenPages] = useState(false)
+    const close = ()=>setOpenPages(false)
     return (
         <>
             <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6 shadow-md'>
@@ -20,9 +22,9 @@ function Header() {
                     <Link to="/course" className='hover:text-[#1C4ED9]'>Courses</Link>
                     <Link to="/about" className='hover:text-[#1C4ED9]'>About Us</Link>
                     <Link to="/contact" className='hover:text-[#1C4ED9]'>Contact Us</Link>
-                    <div className='flex items-center gap-1 cursor-pointer'>
+                    <div className='flex items-center gap-1'>
                         <p>Pages </p>
-                        <IoIosArrowDown />
+                        { openPages ? <IoIosArrowUp onClick={()=>setOpenPages(false)} className='cursor-pointer'/> : <IoIosArrowDown onClick={()=>setOpenPages(true)} className='cursor-pointer'/>}
                     </div>
                 </div>
                 <div className='lg:flex gap-4.5 hidden'>
@@ -43,7 +45,7 @@ function Header() {
                 </div>
 
                 <div className='lg:hidden block' >
-                    {openMenu ? <IoClose className='w-6 h-6' onClick={() => setOpenMenu(false)} /> : <IoMdMenu className='w-6 h-6' onClick={() => setOpenMenu(true)} />}
+                    {openMenu ? <IoClose className='w-6 h-6' onClick={close} /> : <IoMdMenu className='w-6 h-6' onClick={() => setOpenMenu(true)} />}
                 </div>
 
 
@@ -104,6 +106,16 @@ function Header() {
 
                             <button className='px-6 w-full py-2  bg-[#296AD2] text-white rounded-[8px] '>Sign Up</button>
                         </div>
+                    </div>
+                )
+            }
+            {
+                openPages && (
+                    <div className='shadow-md px-8 md:py-4 lg:py-6 flex justify-center gap-8 absolute left-1/2 z-50 top-20 bg-white'>
+                        <Link to="/internship" onClick={close}>Internship</Link>
+                        <Link to="/news" onClick={close}>News</Link>
+                        <Link to="/events" onClick={close}>Events</Link>
+                        <Link to="/blog" onClick={close}>Blog</Link>
                     </div>
                 )
             }

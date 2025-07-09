@@ -1,5 +1,5 @@
-import img from './courseimg1.png'
-const courseDetails = [
+import img from './internship1.jpg'
+const internshipDetails = [
     {
         id: 1,
         image: img,
@@ -72,42 +72,7 @@ const courseDetails = [
         discountPrice: "4,999",
         rating: "4.5"
     },
-    {
-        id: 7,
-        image: img,
-        duration: "4 Months",
-        lesson: "10",
-        studentEnroll: "5K",
-        title: "Mern Full-Stack Development",
-        description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
-        discountPrice: "4,999",
-        rating: "4.5"
-    },
-    {
-        id: 8,
-        image: img,
-        duration: "4 Months",
-        lesson: "10",
-        studentEnroll: "5K",
-        title: "Mern Full-Stack Development",
-        description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
-        discountPrice: "4,999",
-        rating: "4.5"
-    },
-    {
-        id:9,
-        image: img,
-        duration: "4 Months",
-        lesson: "10",
-        studentEnroll: "5K",
-        title: "Mern Full-Stack Development",
-        description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
-        discountPrice: "4,999",
-        rating: "4.5"
-    }
+
 ]
 
-export default courseDetails
+export default internshipDetails

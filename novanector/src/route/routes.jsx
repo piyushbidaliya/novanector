@@ -5,6 +5,8 @@ import About from "../pages/About"
 import Whislist from "../pages/Whislist"
 import Courses from "../pages/course/Courses"
 import CourseDetail from "../pages/course/CourseDetail"
+import Internship from "../pages/internship/Internship"
+import InternshipDetail from "../pages/internship/InternshipDetail"
 
 const routes = createBrowserRouter([
     {
@@ -30,6 +32,14 @@ const routes = createBrowserRouter([
             {
                 path: "courseDetailsOverview/:courseId",
                 element: <CourseDetail/>
+            },
+            {
+                path: "internship",
+                element: <Internship/>
+            },
+            {
+                path: "internshipDetails/:internshipId",
+                element: <InternshipDetail/>
             }
         ]
     }
