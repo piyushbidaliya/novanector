@@ -17,17 +17,17 @@ function Header() {
                     <img src={logo} alt="" />
                 </div>
                 {/* desktop menu */}
-                <div className='lg:flex gap-5 font-normal text-lg hidden'>
+                <div className='xl:flex gap-5 font-normal text-lg hidden'>
                     <Link to="/" className='hover:text-[#1C4ED9]'>Home</Link>
                     <Link to="/course" className='hover:text-[#1C4ED9]'>Courses</Link>
                     <Link to="/about" className='hover:text-[#1C4ED9]'>About Us</Link>
                     <Link to="/contact" className='hover:text-[#1C4ED9]'>Contact Us</Link>
                     <div className='flex items-center gap-1'>
                         <p>Pages </p>
-                        { openPages ? <IoIosArrowUp onClick={()=>setOpenPages(false)} className='cursor-pointer'/> : <IoIosArrowDown onClick={()=>setOpenPages(true)} className='cursor-pointer'/>}
+                        { openPages ? <IoIosArrowUp onClick={close} className='cursor-pointer'/> : <IoIosArrowDown onClick={()=>setOpenPages(true)} className='cursor-pointer'/>}
                     </div>
                 </div>
-                <div className='lg:flex gap-4.5 hidden'>
+                <div className='xl:flex gap-4.5 hidden'>
                     <div className='bg-[#EFEFEF] p-2.5 rounded-full cursor-pointer'>
                         <IoSearch className='w-5 h-5' />
                     </div>
@@ -39,13 +39,13 @@ function Header() {
                     </div>
                 </div>
                 {/* signup/login */}
-                <div className='hidden lg:flex gap-4.5 text-[16px]'>
+                <div className='hidden xl:flex gap-4.5 text-[16px]'>
                     <button className='px-6 py-3 text-[#296AD2] rounded-[8px] border border-[#296AD2] cursor-pointer'>Sign Up</button>
                     <button className='px-6 py-3 bg-[#296AD2] text-white rounded-[8px] cursor-pointer'>Login</button>
                 </div>
 
-                <div className='lg:hidden block' >
-                    {openMenu ? <IoClose className='w-6 h-6' onClick={close} /> : <IoMdMenu className='w-6 h-6' onClick={() => setOpenMenu(true)} />}
+                <div className='xl:hidden block' >
+                    {openMenu ? <IoClose className='w-6 h-6' onClick={()=>setOpenMenu(false)} /> : <IoMdMenu className='w-6 h-6' onClick={() => setOpenMenu(true)} />}
                 </div>
 
 
@@ -53,7 +53,7 @@ function Header() {
             {/* mobile menu */}
             {
                 openMenu && (
-                    <div className=' block px-6 font-normal text-lg lg:hidden absolute top-14 bg-white w-full z-50'>
+                    <div className=' block px-6 md:px-12 lg:px-24 pb-10 font-normal text-lg xl:hidden absolute top-14 md:top-20 lg:top-24 bg-white w-full z-50'>
                         <div className='flex items-center gap-2 border-b-1 border-[#E3E3E3]'>
                             <IoSearch/>
                             <input type="text" name="" id="" placeholder='Search here'/>
@@ -101,7 +101,7 @@ function Header() {
                                 <IoCartOutline className='w-5 h-5' />
                             </div>
                         </div>
-                        <div className='lg:hidden flex gap-4.5 text-[16px]'>
+                        <div className='xl:hidden flex gap-4.5 text-[16px]'>
                             <button className='px-6 py-2 w-full text-[#296AD2] border-[#296AD2] border rounded-[8px]'>Login</button>
 
                             <button className='px-6 w-full py-2  bg-[#296AD2] text-white rounded-[8px] '>Sign Up</button>

@@ -81,7 +81,6 @@ const faqs = [
 
 
 function Home() {
-
     const [activeIndex, setActiveIndex] = useState(null);
     const toggle = (index) => {
         if (activeIndex === index) {
@@ -101,14 +100,14 @@ function Home() {
                         <Heading title="Welcome To Novanector" />
                         <h1 className='font-semibold text-[30px] md:text-[70px] leading-[100%] tracking-normal pb-6'>Empowering You to Learn, Grow, and Succeed</h1>
                         <p className='text-[#6F6F6F] font-normal text-[16px] md:text-[18px] leading-[100%] tracking-normal'>Unlock your potential with expert-led courses designed for every goal and learn at your own pace and gain the skills to succeed in career and life.</p>
-                        <div className='pt-10 flex gap-2 md:gap-7 text-[16px] flex-wrap'>
+                        <div className='pt-10 lg:py-10 flex gap-2 md:gap-7 text-[16px] flex-wrap'>
                             <button className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] cursor-pointer'>Enroll Now <FaArrowRightLong className='inline ml-2' /></button>
                             <button className='text-[#296AD2] border-[#296AD2] border py-3 px-6 rounded-[4px] cursor-pointer'>Explore Courses <FaArrowRightLong className='inline ml-2' /></button>
                         </div>
                     </div>
 
                     <div className='flex-1'>
-                        <div className='relative top-0 lg:top-17 xl:top-0'>
+                        <div className='relative top-0 lg:top-10 xl:top-0'>
                             <img src={hero} alt="hero" className='h-[350px] sm:h-[500px] object-cover' />
                             <div className='bg-white p-1 sm:p-3 rounded-[4px] w-fit flex items-center gap-0 sm:gap-2 absolute top-26 left-0 sm:top-30 sm:-left-16 md:-left-6 lg:-left-16 '>
                                 <div className='bg-[#296AD2] p-2 rounded-full'>
@@ -120,7 +119,7 @@ function Home() {
                                 </div>
                             </div>
 
-                            <div className='bg-white p-1 sm:p-3 rounded-[4px] w-fit flex items-center gap-2 absolute top-32 sm:top-20 right-0 md:right-8 lg:right-0'>
+                            <div className='bg-white p-1 sm:p-3 rounded-[4px] w-fit flex items-center gap-2 absolute top-32 sm:top-20 right-0 md:right-8 lg:-right-8 lg:top-38 xl:top-20 xl:right-0'>
                                 <div className='font-normal text-[12px] md:text-[16px]'>
                                     <p className='text-[#296AD2] '>10K+</p>
                                     Online Students
@@ -408,7 +407,7 @@ function Home() {
                         </li>
                     </ul>
                     <div className=''>
-                        <button className='bg-[#296AD2] py-3 px-6 rounded-[4px] text-white cursor-pointer font-normal text-[16px]'>Contact Us <FaArrowRightLong className='inline ml-2' /> </button>
+                        <button  className='bg-[#296AD2] py-3 px-6 rounded-[4px] text-white cursor-pointer font-normal text-[16px]'>Contact Us <FaArrowRightLong className='inline ml-2' /> </button>
                     </div>
                 </div>
 

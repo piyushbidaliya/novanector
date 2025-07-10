@@ -148,14 +148,16 @@ libraries like Pandas and NumPy to boost your career opportunities as a professi
                         <li>{data.point2}</li>
                         <li>{data.point3}</li>
                     </ul>
-                    <button className='w-full cursor-pointer py-4 px-6 border border-[#296AD2] text-[#296AD2] hover:text-white hover:bg-[#296AD2]'>Enroll Now</button>
+                    <button onClick={()=>setOpenEnrollForm(true)} className='w-full cursor-pointer py-4 px-6 border border-[#296AD2] text-[#296AD2] hover:text-white hover:bg-[#296AD2]'>Enroll Now</button>
                 </div>
                 ))}
             </div>
         </section>
 
         {
-            
+            openEnrollForm && (
+                
+            )
         }
     </>
   )
