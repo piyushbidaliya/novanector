@@ -7,15 +7,13 @@ import Contacts from "./pages/Contact"
 function App() {
 
   return (
-    <>
-    <Contacts/>
-      {/* <Header/> */}
-
-      
-      {/* <main>
+    <> 
+      <main>
+      <Header/>
+      <main className="">
         <Outlet/>
       </main>
-      <Footer/> */}
+      <Footer/>
     </>
   )
 }

@@ -1,7 +1,12 @@
 import { createBrowserRouter } from "react-router-dom"
 import App from "../App"
 import Home from "../pages/Home"
-import Contacts from "../pages/Contact"
+import About from "../pages/About"
+import Whislist from "../pages/Whislist"
+import Courses from "../pages/course/Courses"
+import CourseDetail from "../pages/course/CourseDetail"
+import Internship from "../pages/internship/Internship"
+import InternshipDetail from "../pages/internship/InternshipDetail
 
 const routes = createBrowserRouter([
     {
@@ -13,9 +18,30 @@ const routes = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: "contact",
-                element: <Contacts/>
+
+                path: "about",
+                element: <About/>
             },
+            {
+                path: "whislist",
+                element: <Whislist/>
+            },
+            {
+                path: "course",
+                element: <Courses/>                    
+            },
+            {
+                path: "courseDetailsOverview/:courseId",
+                element: <CourseDetail/>
+            },
+            {
+                path: "internship",
+                element: <Internship/>
+            },
+            {
+                path: "internshipDetails/:internshipId",
+                element: <InternshipDetail/>
+            }
         ]
     }
 ])
