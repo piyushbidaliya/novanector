@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import banner from '../../assets/internship1.jpg'
 import Heading from '../../component/ThunderHeading'
 import { MdAppRegistration } from 'react-icons/md'
+import InternshipForm from '../../component/InternshipForm'
 
 
 const journey = [
@@ -156,7 +157,7 @@ libraries like Pandas and NumPy to boost your career opportunities as a professi
 
         {
             openEnrollForm && (
-                
+                <InternshipForm/>
             )
         }
     </>
