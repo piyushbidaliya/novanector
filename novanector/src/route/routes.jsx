@@ -18,6 +18,7 @@ const routes = createBrowserRouter([
                 element: <Home/>
             },
             {
+
                 path: "about",
                 element: <About/>
             },
