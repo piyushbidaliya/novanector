@@ -11,9 +11,10 @@ import logo from "../assets/logoN.png";
 function Contacts() {
   return (
     <>
+      <div className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 h-full'>
       {/* Header Section */}
-      <div className='text-[#292929] font-medium text-[30px] leading-[100%] text-center px-4'>
-        <h1>Contact Us</h1>
+      <div className='text-[#292929] font-medium text-[30px] leading-[100%] text-center'>
+        <h1 >Contact Us</h1>
         <p className='font-normal text-[#6F6F6F] text-[14px] mt-3 leading-6'>
           At Novanectar Courses, we're here to help you at every step of your learning journey. Whether you have questions, feedback,<br className="hidden sm:block" />
           or need support, feel free to reach out—we’re just a message away.
@@ -21,7 +22,7 @@ function Contacts() {
       </div>
 
       {/* Top Contact Button */}
-      <div className='px-4 sm:px-8 md:px-10'>
+      <div className=''>
         <button className="flex mt-10 gap-2 bg-white border border-gray-300 px-4 py-2 rounded-full shadow-sm">
           <div className="bg-blue-100 p-2 rounded-full">
             <FaBoltLightning className="text-blue-600 w-4 h-4" />
@@ -31,7 +32,7 @@ function Contacts() {
       </div>
 
       {/* Intro Grid */}
-      <div className='grid sm:grid-cols-2 grid-cols-1 px-4 sm:px-8 md:px-12 gap-8 items-center '>
+      <div className='grid sm:grid-cols-2 grid-cols-1 gap-8 items-center '>
         <div className='space-y-4 h-[320px]'>
           <h2 className='text-2xl sm:text-4xl font-bold text-[#1F1F1F]'>
             Transform Your Future with Excellence<br />in Education
@@ -61,7 +62,7 @@ function Contacts() {
 
       {/* Message Grid */}
 
-      <div className="flex flex-col-reverse md:flex-row p-6 md:p-12 gap-8 -mt-20">
+      <div className="flex flex-col-reverse md:flex-row py-6 md:py-12 gap-8 -mt-20">
 
         <div className="md:w-1/2">
           <img src={laptop} alt="Support" className="rounded-lg shadow-md w-full h-auto object-cover" />
@@ -99,7 +100,7 @@ function Contacts() {
 
 
       {/* Contact Cards */}
-      <div className="p-6  h-auto -mt-10">
+      <div className="py-6  h-auto -mt-10">
         <div className="text-center mb-6">
           <button className="flex items-center justify-center gap-2 bg-white border border-gray-300 px-4 py-2 rounded-full shadow-sm mx-auto">
             <div className="bg-blue-100 p-2 rounded-full">
@@ -130,7 +131,7 @@ function Contacts() {
           </div>
 
           {/* Email */}
-          <div className="bg-white text-center rounded-lg p-6 shadow border border-gray-300 max-w-[240px] mx-auto">
+          <div className="bg-white text-center rounded-lg py-6 shadow border border-gray-300 max-w-[240px] mx-auto">
             <div className="bg-blue-100 text-blue-500 text-2xl w-10 h-10 flex items-center justify-center rounded-full mb-2 mx-auto">
               <CgMail />
             </div>
@@ -139,7 +140,7 @@ function Contacts() {
           </div>
 
           {/* Website */}
-          <div className="bg-white text-center rounded-lg p-6 shadow border border-gray-300 max-w-[240px] mx-auto">
+          <div className="bg-white text-center rounded-lg py-6 shadow border border-gray-300 max-w-[240px] mx-auto">
             <div className="bg-blue-100 text-blue-500 text-2xl w-10 h-10 flex items-center justify-center rounded-full mb-2 mx-auto">
               <CiGlobe />
             </div>
@@ -150,7 +151,7 @@ function Contacts() {
       </div>
 
       {/* Map Section */}
-      <div className='px-4 sm:px-8 mb-12'>
+      <div className='mb-12'>
         <iframe
           title="map"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d110204.72538042432!2d78.01713464999997!3d30.32542845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1751650761622!5m2!1sen!2sin"
@@ -159,6 +160,7 @@ function Contacts() {
           loading="lazy"
           allowFullScreen=""
         ></iframe>
+      </div>
       </div>
 
       {/* Footer */}
