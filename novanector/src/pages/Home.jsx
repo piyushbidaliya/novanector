@@ -81,6 +81,7 @@ const faqs = [
 
 
 function Home() {
+
     const [activeIndex, setActiveIndex] = useState(null);
     const toggle = (index) => {
         if (activeIndex === index) {

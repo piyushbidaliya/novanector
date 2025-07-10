@@ -6,7 +6,7 @@ import Whislist from "../pages/Whislist"
 import Courses from "../pages/course/Courses"
 import CourseDetail from "../pages/course/CourseDetail"
 import Internship from "../pages/internship/Internship"
-import InternshipDetail from "../pages/internship/InternshipDetail"
+import InternshipDetail from "../pages/internship/InternshipDetail
 
 const routes = createBrowserRouter([
     {
@@ -18,6 +18,7 @@ const routes = createBrowserRouter([
                 element: <Home/>
             },
             {
+
                 path: "about",
                 element: <About/>
             },
