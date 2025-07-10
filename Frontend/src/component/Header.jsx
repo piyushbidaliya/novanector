@@ -9,6 +9,7 @@ function Header() {
     const [openMenu, setOpenMenu] = useState(false)
     const [openPages, setOpenPages] = useState(false)
     const close = ()=>setOpenPages(false)
+    const closeMenu = ()=>setOpenMenu(false)
     return (
         <>
             <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6 shadow-md'>
@@ -45,7 +46,7 @@ function Header() {
                 </div>
 
                 <div className='xl:hidden block' >
-                    {openMenu ? <IoClose className='w-6 h-6' onClick={()=>setOpenMenu(false)} /> : <IoMdMenu className='w-6 h-6' onClick={() => setOpenMenu(true)} />}
+                    {openMenu ? <IoClose className='w-6 h-6' onClick={closeMenu} /> : <IoMdMenu className='w-6 h-6' onClick={() => setOpenMenu(true)} />}
                 </div>
 
 
@@ -60,51 +61,51 @@ function Header() {
                         </div>
                         <ul>
                             <li className='py-3'>
-                                <Link to="/" className='hover:text-[#1C4ED9]'>Home</Link>
+                                <Link to="/" onClick={closeMenu} className='hover:text-[#1C4ED9]'>Home</Link>
                             </li>
                             <li className='pb-3'>
-                                <Link to="/course" className='hover:text-[#1C4ED9]'>Courses</Link>
+                                <Link to="/course" onClick={closeMenu} className='hover:text-[#1C4ED9]'>Courses</Link>
                             </li>
                             <li className='pb-3'>
-                                <Link to="/about" className='hover:text-[#1C4ED9]'>About Us</Link>
+                                <Link to="/about" onClick={closeMenu} className='hover:text-[#1C4ED9]'>About Us</Link>
                             </li>
                             <li className='pb-3'>
-                                <Link to="/contact" className='hover:text-[#1C4ED9]'>Contact Us</Link>
+                                <Link to="/contact" onClick={closeMenu} className='hover:text-[#1C4ED9]'>Contact Us</Link>
                             </li>
                             <li className='flex justify-between items-center gap-1 cursor-pointer pb-3'>
                                 <p>Pages </p>
                                 <IoIosArrowForward />
                             </li>
                             <li className='pb-3'>
-                                <Link to="/internship" className='hover:text-[#1C4ED9]'>Internship</Link>
+                                <Link to="/internship" onClick={closeMenu} className='hover:text-[#1C4ED9]'>Internship</Link>
                             </li>
                             <li className='pb-3'>
-                                <Link to="/blog" className='hover:text-[#1C4ED9]'>Blog</Link>
+                                <Link to="/blog" onClick={closeMenu} className='hover:text-[#1C4ED9]'>Blog</Link>
                             </li>
                             <li className='pb-3'>
-                                <Link to="/event" className='hover:text-[#1C4ED9]'>Event</Link>
+                                <Link to="/events" onClick={closeMenu} className='hover:text-[#1C4ED9]'>Event</Link>
                             </li>
                             <li className='pb-3'>
-                                <Link to="/news" className='hover:text-[#1C4ED9]'>News</Link>
+                                <Link to="/news" onClick={closeMenu} className='hover:text-[#1C4ED9]'>News</Link>
                             </li>
 
 
                         </ul>
                         <div className='flex gap-4.5 lg:hidden pb-3'>
-                            <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
+                            <Link to="/search" onClick={closeMenu} className='bg-[#EFEFEF] p-2.5 rounded-full'>
                                 <IoSearch className='w-5 h-5' />
-                            </div>
-                            <Link to="/whislist" className='bg-[#EFEFEF] p-2.5 rounded-full'>
+                            </Link>
+                            <Link to="/whislist" onClick={closeMenu} className='bg-[#EFEFEF] p-2.5 rounded-full'>
                                 <FaRegHeart className='w-5 h-5' />
                             </Link>
-                            <div className='bg-[#EFEFEF] p-2.5 rounded-full'>
+                            <Link to="/cart" onClick={closeMenu} className='bg-[#EFEFEF] p-2.5 rounded-full'>
                                 <IoCartOutline className='w-5 h-5' />
-                            </div>
+                            </Link>
                         </div>
                         <div className='xl:hidden flex gap-4.5 text-[16px]'>
-                            <button className='px-6 py-2 w-full text-[#296AD2] border-[#296AD2] border rounded-[8px]'>Login</button>
+                            <button onClick={()=>{closeMenu()}} className='px-6 py-2 w-full text-[#296AD2] border-[#296AD2] border rounded-[8px]' >Login</button>
 
-                            <button className='px-6 w-full py-2  bg-[#296AD2] text-white rounded-[8px] '>Sign Up</button>
+                            <button onClick={()=>{closeMenu()}} className='px-6 w-full py-2  bg-[#296AD2] text-white rounded-[8px] '>Sign Up</button>
                         </div>
                     </div>
                 )
