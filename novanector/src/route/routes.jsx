@@ -8,6 +8,10 @@ import CourseDetail from "../pages/course/CourseDetail"
 import Internship from "../pages/internship/Internship"
 import InternshipDetail from "../pages/internship/InternshipDetail"
 import Contacts from "../pages/Contact"
+import Event from "../pages/event/Event"
+import EventDetails from "../pages/event/EventDetails"
+import News from "../pages/news/News"
+import NewsDetails from "../pages/news/NewsDetails"
 
 const routes = createBrowserRouter([
     {
@@ -47,6 +51,22 @@ const routes = createBrowserRouter([
             {
                 path: "internshipDetails/:internshipId",
                 element: <InternshipDetail/>
+            },
+            {
+                path: "events",
+                element: <Event/>
+            },
+            {
+                path: "eventDetails/:eventId",
+                element: <EventDetails/>
+            },
+            {
+                path: "news",
+                element: <News/>
+            },
+            {
+                path: "newsDetails/:newsId",
+                element: <NewsDetails/>
             }
         ]
     }

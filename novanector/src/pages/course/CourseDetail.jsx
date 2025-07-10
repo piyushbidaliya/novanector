@@ -95,7 +95,7 @@ function CourseDetail() {
           {/* Body Section */}
           <div className='flex flex-col lg:flex-row gap-6 items-start'>
             {/* Left - Tabs and Content */}
-            <div className='w-full lg:w-3/4 border border-[#E3E3E3] p-5 rounded-2xl'>
+            <div className='w-full lg:w-3/4 border border-[#E3E3E3] p-4 rounded-2xl'>
               <div className='flex border border-[#E3E3E3] flex-wrap'>
                 {tabDetails.map((tab, index) => (
                   <div

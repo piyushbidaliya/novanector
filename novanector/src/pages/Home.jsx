@@ -26,6 +26,7 @@ import testimonials from '../assets/testimonials.png'
 import NewsCard from '../component/NewsCard';
 import contact from '../assets/contact.png'
 import { IoClose } from 'react-icons/io5';
+import newsDetails from '../assets/newsDetails';
 const onlineStudent = [
     { image: img1, alt: "student" },
     { image: img2, alt: "student" },
@@ -91,6 +92,7 @@ function Home() {
     };
 
     const topSixCourses = courseDetails.slice(0, 6)
+    const topThree = newsDetails.slice(0, 3)
     return (
         <>
             {/* Hero */}
@@ -380,7 +382,7 @@ function Home() {
                     <h1 className='font-semibold text-[26px] md:text-[40px] '>Latest News</h1>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-6'>
-                    <NewsCard />
+                    <NewsCard newsDetails={topThree}/>
                 </div>
                 <div className='flex justify-center mt-3 items-center'>
                     <button className='bg-[#296AD2] py-3 px-6 rounded-[4px] text-white cursor-pointer font-normal text-[16px]'>View All News <FaArrowRightLong className='inline ml-2' /> </button>

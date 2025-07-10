@@ -157,7 +157,7 @@ libraries like Pandas and NumPy to boost your career opportunities as a professi
 
         {
             openEnrollForm && (
-                <InternshipForm/>
+                <InternshipForm close={()=>setOpenEnrollForm(false)}/>
             )
         }
     </>
