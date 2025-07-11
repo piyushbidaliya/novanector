@@ -29,6 +29,11 @@ if (!fs.existsSync(instructorImagesDir)) {
   fs.mkdirSync(instructorImagesDir, { recursive: true });
 }
 
+const blogDir = path.join(__dirname, "../../uploads/blog");
+if (!fs.existsSync(blogDir)) {
+  fs.mkdirSync(blogDir, { recursive: true });
+}
+
 // File validation
 const fileFilter = (req, file, cb) => {
   const allowedMimeTypes = [
@@ -74,6 +79,8 @@ const localStorage = multer.diskStorage({
       uploadPath = path.join(__dirname, "../../uploads/course-thumbnails");
     } else if (file.fieldname === "instructorImage") {
       uploadPath = path.join(__dirname, "../../uploads/instructor-images");
+    } else if (file.fieldname === "blogDir") {
+      uploadPath = path.join(__dirname, "../../uploads/blogDir");
     } else {
       uploadPath = path.join(__dirname, "../../uploads/profile-pictures");
     }
@@ -164,6 +171,7 @@ const validateFile = (req, res, next) => {
 const uploadProfilePicture = profilePictureUpload.single("profilePicture");
 const uploadCourseThumbnail = profilePictureUpload.single("thumbnailImage");
 const uploadInstructorImage = profilePictureUpload.single("instructorImage");
+const uploadBlogImage = profilePictureUpload.single("blogImage");
 const uploadMultipleImages = profilePictureUpload.array("images", 5);
 
 // Optional upload middleware
@@ -221,6 +229,7 @@ export {
   uploadCourseThumbnail,
   uploadInstructorImage,
   uploadMultipleImages,
+  uploadBlogImage,
   handleMulterError,
   validateFile,
   deleteImageFromLocal,

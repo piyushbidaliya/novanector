@@ -11,7 +11,8 @@ import cartRoutes from "./routes/cartRoutes.js";
 import instructorRoutes from "./routes/instructorRoutes.js";
 import enrollmentRoutes from "./routes/enrollmentRoutes.js";
 import wishlistRoutes from "./routes/wishlistRoutes.js";
-import testRoutes from "./routes/testRoutes.js";
+import blogRoutes from "./routes/blogRoutes.js";
+// import testRoutes from "./routes/testRoutes.js";
 
 // ES6 modules compatibility
 const __filename = fileURLToPath(import.meta.url);
@@ -44,7 +45,8 @@ app.use("/api/cart", cartRoutes);
 app.use("/api/instructors", instructorRoutes);
 app.use("/api/enrollments", enrollmentRoutes);
 app.use("/api/wishlist", wishlistRoutes);
-app.use("/api/test", testRoutes);
+app.use("/api/blog", blogRoutes);
+// app.use("/api/test", testRoutes);
 
 // Health check
 app.get("/", (req, res) => {
