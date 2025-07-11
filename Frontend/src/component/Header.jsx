@@ -29,9 +29,9 @@ function Header() {
                     </div>
                 </div>
                 <div className='xl:flex gap-4.5 hidden'>
-                    <div className='bg-[#EFEFEF] p-2.5 rounded-full cursor-pointer'>
+                    <Link to="/search" className='bg-[#EFEFEF] p-2.5 rounded-full cursor-pointer'>
                         <IoSearch className='w-5 h-5' />
-                    </div>
+                    </Link>
                     <Link to="/whislist" className='bg-[#EFEFEF] p-2.5 rounded-full'>
                         <FaRegHeart className='w-5 h-5' />
                     </Link>
@@ -55,10 +55,10 @@ function Header() {
             {
                 openMenu && (
                     <div className=' block px-6 md:px-12 lg:px-24 pb-10 font-normal text-lg xl:hidden absolute top-14 md:top-20 lg:top-24 bg-white w-full z-50'>
-                        <div className='flex items-center gap-2 border-b-1 border-[#E3E3E3]'>
+                        <Link to="/search" className='flex items-center gap-2 border-b-1 border-[#E3E3E3]'>
                             <IoSearch/>
                             <input type="text" name="" id="" placeholder='Search here'/>
-                        </div>
+                        </Link>
                         <ul>
                             <li className='py-3'>
                                 <Link to="/" onClick={closeMenu} className='hover:text-[#1C4ED9]'>Home</Link>

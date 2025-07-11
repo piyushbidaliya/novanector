@@ -14,6 +14,7 @@ import News from "../pages/news/News"
 import NewsDetails from "../pages/news/NewsDetails"
 import Blog from "../pages/blog/Blog"
 import BlogDetails from "../pages/blog/BlogDetails"
+import Search from "../pages/Search"
 
 const routes = createBrowserRouter([
     {
@@ -77,6 +78,10 @@ const routes = createBrowserRouter([
             {
                 path: "blogDetails/:blogId",
                 element: <BlogDetails/>
+            },
+            {
+                path: "search",
+                element: <Search/>
             },
         ]
     }
