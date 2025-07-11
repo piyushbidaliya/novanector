@@ -71,7 +71,7 @@ function Header() {
             {/* mobile menu */}
             {
                 openMenu && (
-                    <div className=' block px-6 md:px-12 lg:px-24 pb-10 font-normal text-lg xl:hidden absolute top-14 md:top-20 lg:top-24 bg-white w-full z-50 sticky top-0'>
+                    <div className=' block px-6 md:px-12 lg:px-24 pb-10 font-normal text-lg xl:hidden top-14 md:top-20 lg:top-24 bg-white w-full z-50 sticky'>
                         <Link to="/search" className='flex items-center gap-2 border-b-1 border-[#E3E3E3]'>
                             <IoSearch/>
                             <input type="text" name="" id="" placeholder='Search here'/>
