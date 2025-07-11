@@ -14,7 +14,7 @@ function Header() {
     const { cartCount, wishlistCount } = useCart();
     return (
         <>
-            <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6 shadow-md sticky bg-white top-0'>
+            <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6 shadow-md sticky bg-white top-0 z-50'>
                 {/* logo image */}
                 <div className='w-[200px] h-auto'>
                     <img src={logo} alt="" />
@@ -46,14 +46,14 @@ function Header() {
                         </div>
                     </Link>
                     <div className='bg-[#EFEFEF] p-2.5 rounded-full cursor-pointer'>
-                        <div className='relative'>
+                        <Link to="/cart" className='relative'>
                             <IoCartOutline className='w-5 h-5' />
                             {cartCount > 0 && (
                                 <div className="absolute -top-3 -right-2 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
                                     <span>{cartCount}</span>
                                 </div>
                             )}
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 {/* signup/login */}

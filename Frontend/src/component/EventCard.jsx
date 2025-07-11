@@ -27,7 +27,7 @@ function EventCard({eventDetails}) {
         </div>
         <h1 className='pb-4 font-medium text-[24px]'>{event.title}</h1>
         <p className='pb-4 font-normal text-[16px] text-[#6F6F6F]'>{event.description} <span className='text-[#296AD2] cursor-pointer'>see more...</span></p>
-        <button onClick={()=>navigate(`/eventDetails/${event.id}`)} className='w-full py-4 text-[#296AD2] cursor-pointer'>View Details <FaArrowRightLong className='inline ml-2'/></button>
+        <button onClick={()=>navigate(`/eventDetails/${event.id}`)} className='w-full py-4 text-[#296AD2] cursor-pointer font-normal text-[14px]'>View Details <FaArrowRightLong className='inline ml-2'/></button>
       </div>
     </div>
         ))}

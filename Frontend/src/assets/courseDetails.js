@@ -8,7 +8,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "Mern Full-Stack Development",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -20,7 +20,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "Python Development",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -32,7 +32,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "Java Development",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -44,7 +44,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "ML/AI",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -56,7 +56,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "Data Science",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -68,7 +68,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "Graphic designing",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -80,7 +80,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "Android Development",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -92,7 +92,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "ios Development",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     },
@@ -104,7 +104,7 @@ const courseDetails = [
         studentEnroll: "5K",
         title: "Mern Full-Stack Development",
         description: "Develop robust web applications with MongoDB, Express, React, and",
-        price: "11,999",
+        price: 11999,
         discountPrice: "4,999",
         rating: "4.5"
     }

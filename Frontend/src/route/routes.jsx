@@ -15,6 +15,7 @@ import NewsDetails from "../pages/news/NewsDetails"
 import Blog from "../pages/blog/Blog"
 import BlogDetails from "../pages/blog/BlogDetails"
 import Search from "../pages/Search"
+import Cart from "../pages/Cart"
 
 const routes = createBrowserRouter([
     {
@@ -82,6 +83,10 @@ const routes = createBrowserRouter([
             {
                 path: "search",
                 element: <Search/>
+            },
+            {
+                path: "cart",
+                element: <Cart/>
             },
         ]
     }

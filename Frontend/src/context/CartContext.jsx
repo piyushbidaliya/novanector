@@ -1,12 +1,15 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useEffect, useReducer } from 'react';
 
 const CartContext = createContext();
 
+const localCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+const localWishlist = JSON.parse(localStorage.getItem('wishlistItems')) || [];
 
 const initialState = {
-  cartItems: [],
-  wishlistItems: [], 
+  cartItems: localCart,
+  wishlistItems: localWishlist,
 };
+
 
 function cartReducer(state, action) {
   switch (action.type) {
@@ -59,6 +62,10 @@ export function CartProvider({ children }) {
   const cartCount = state.cartItems.length;
   const wishlistCount = state.wishlistItems.length;
 
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+    localStorage.setItem('wishlistItems', JSON.stringify(state.wishlistItems));
+  }, [state.cartItems, state.wishlistItems]);
 
 
   return (
