@@ -4,15 +4,17 @@ import logo from '../assets/logo.png'
 import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp, IoMdMenu } from "react-icons/io";
 import { IoCartOutline, IoClose, IoSearch } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
+import { useCart } from '../context/CartContext';
 
 function Header() {
     const [openMenu, setOpenMenu] = useState(false)
     const [openPages, setOpenPages] = useState(false)
     const close = ()=>setOpenPages(false)
     const closeMenu = ()=>setOpenMenu(false)
+    const { cartCount, wishlistCount } = useCart();
     return (
         <>
-            <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6 shadow-md'>
+            <nav className='flex justify-between items-center px-4 md:px-12 lg:px-24 md:py-4 lg:py-6 shadow-md sticky bg-white top-0'>
                 {/* logo image */}
                 <div className='w-[200px] h-auto'>
                     <img src={logo} alt="" />
@@ -33,10 +35,25 @@ function Header() {
                         <IoSearch className='w-5 h-5' />
                     </Link>
                     <Link to="/whislist" className='bg-[#EFEFEF] p-2.5 rounded-full'>
-                        <FaRegHeart className='w-5 h-5' />
+                        <div className='relative'>
+                            <FaRegHeart className='w-5 h-5' />
+                            {wishlistCount > 0 && (
+                                <div className="absolute -top-3 -right-2 bg-red-600 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+                                    <span>{wishlistCount}</span>
+                                </div>
+                            )}
+
+                        </div>
                     </Link>
                     <div className='bg-[#EFEFEF] p-2.5 rounded-full cursor-pointer'>
-                        <IoCartOutline className='w-5 h-5' />
+                        <div className='relative'>
+                            <IoCartOutline className='w-5 h-5' />
+                            {cartCount > 0 && (
+                                <div className="absolute -top-3 -right-2 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+                                    <span>{cartCount}</span>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
                 {/* signup/login */}
@@ -54,7 +71,7 @@ function Header() {
             {/* mobile menu */}
             {
                 openMenu && (
-                    <div className=' block px-6 md:px-12 lg:px-24 pb-10 font-normal text-lg xl:hidden absolute top-14 md:top-20 lg:top-24 bg-white w-full z-50'>
+                    <div className=' block px-6 md:px-12 lg:px-24 pb-10 font-normal text-lg xl:hidden absolute top-14 md:top-20 lg:top-24 bg-white w-full z-50 sticky top-0'>
                         <Link to="/search" className='flex items-center gap-2 border-b-1 border-[#E3E3E3]'>
                             <IoSearch/>
                             <input type="text" name="" id="" placeholder='Search here'/>

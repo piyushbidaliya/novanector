@@ -67,12 +67,12 @@ libraries like Pandas and NumPy to boost your career opportunities as a professi
 
         {/* Journey section */}
         <section className='px-4 md:px-12 lg:px-24 h-full'>
-            <div className='flex justify-center flex-col items-center pb-18'>
+            <div className='flex justify-center flex-col items-center pb-6 md:pb-18'>
                 <Heading title=" Journey" />
-                <h1 className='font-semibold text-[26px] md:text-[40px] '>Your Internship Journey</h1>
+                <h1 className='font-semibold text-[26px] md:text-[40px] text-center'>Your Internship Journey</h1>
             </div>
 
-            <div className='flex justify-center items-center gap-15 pb-6'>
+            <div className='flex justify-center items-center gap-8 md:gap-15 pb-6 flex-wrap'>
                 {journey.map((data, index)=>(
                 <div key={index} className='w-[163px]' >
                     <p className='font-normal text-[18px] text-center'>{data.heading}</p>
@@ -82,7 +82,7 @@ libraries like Pandas and NumPy to boost your career opportunities as a professi
             </div>
             
             {/* circles */}
-            <div className='flex justify-center items-center pb-6 gap-2'>
+            <div className='flex justify-center items-center pb-6 gap-2 flex-wrap'>
                 <div className='p-1 border-b-4 border-[#296AD2] rounded-full'>
                     <div className='p-8 bg-[#DDEEFF] text-[#387DEB] rounded-full'>
                         <MdAppRegistration className='w-7 h-7'/>
@@ -120,7 +120,7 @@ libraries like Pandas and NumPy to boost your career opportunities as a professi
                 </div>
             </div>
 
-            <div className='flex justify-center items-center gap-15 pb-6'>
+            <div className='flex justify-center items-center gap-8 md:gap-15 pb-6 flex-wrap'>
                 {journey2.map((data, index)=>(
                 <div key={index} className='w-[163px]' >
                     <p className='font-normal text-[18px] text-center'>{data.heading}</p>
@@ -134,7 +134,7 @@ libraries like Pandas and NumPy to boost your career opportunities as a professi
         <section className='px-4 md:px-12 lg:px-24 py-10 h-full'>
             <div className='flex justify-center flex-col items-center pb-18'>
                 <Heading title=" Internship Duration" />
-                <h1 className='font-semibold text-[26px] md:text-[40px] '>Choose Your Internship Duration</h1>
+                <h1 className='font-semibold text-[26px] md:text-[40px] text-center'>Choose Your Internship Duration</h1>
             </div>
 
             <div className='flex flex-wrap gap-3'>

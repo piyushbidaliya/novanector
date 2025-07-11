@@ -27,6 +27,7 @@ import NewsCard from '../component/NewsCard';
 import contact from '../assets/contact.png'
 import { IoClose } from 'react-icons/io5';
 import newsDetails from '../assets/newsDetails';
+import { Link } from 'react-router-dom';
 const onlineStudent = [
     { image: img1, alt: "student" },
     { image: img2, alt: "student" },
@@ -103,8 +104,8 @@ function Home() {
                         <h1 className='font-semibold text-[30px] md:text-[70px] leading-[100%] tracking-normal pb-6'>Empowering You to Learn, Grow, and Succeed</h1>
                         <p className='text-[#6F6F6F] font-normal text-[16px] md:text-[18px] leading-[100%] tracking-normal'>Unlock your potential with expert-led courses designed for every goal and learn at your own pace and gain the skills to succeed in career and life.</p>
                         <div className='pt-10 lg:py-10 flex gap-2 md:gap-7 text-[16px] flex-wrap'>
-                            <button className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] cursor-pointer'>Enroll Now <FaArrowRightLong className='inline ml-2' /></button>
-                            <button className='text-[#296AD2] border-[#296AD2] border py-3 px-6 rounded-[4px] cursor-pointer'>Explore Courses <FaArrowRightLong className='inline ml-2' /></button>
+                            <Link to="/internship" className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] cursor-pointer'>Enroll Now <FaArrowRightLong className='inline ml-2' /></Link>
+                            <Link to="/course" className='text-[#296AD2] border-[#296AD2] border py-3 px-6 rounded-[4px] cursor-pointer'>Explore Courses <FaArrowRightLong className='inline ml-2' /></Link>
                         </div>
                     </div>
 
@@ -194,10 +195,10 @@ function Home() {
                         <p>Online Courses</p>
                     </div>
                     <div className=''>
-                        <img src={homeabout2} alt="image" className='h-[241px]' />
+                        <img src={homeabout2} alt="image" className='h-[241px] object-cover' />
                     </div>
                     <div>
-                        <img src={homeabout1} alt="image" className='h-[241px]' />
+                        <img src={homeabout1} alt="image" className='h-[241px] object-cover' />
                     </div>
                     <div className='font-normal text-[12px] md:text-[16px] flex justify-center items-center flex-col bg-[#F2F8FF]'>
                         <p className='text-[#296AD2] '>10K+</p>
@@ -235,7 +236,7 @@ function Home() {
                             <p>Learn from Experts</p>
                         </div>
                     </div>
-                    <button className='bg-[#296AD2] py-3 px-6 text-white font-normal text-[16px] rounded-[4px]'>Learn More About Us <FaArrowRightLong className='inline ml-2' /></button>
+                    <Link to="/about" className='bg-[#296AD2] py-3 px-6 text-white font-normal text-[16px] rounded-[4px]'>Learn More About Us <FaArrowRightLong className='inline ml-2' /></Link>
                 </div>
             </section>
 
@@ -272,13 +273,13 @@ function Home() {
             <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 h-full'>
                 <div className='flex justify-center flex-col items-center'>
                     <Heading title="Top Courses" />
-                    <h1 className='font-semibold text-[26px] md:text-[40px] '>Explore Featured Courses</h1>
+                    <h1 className='font-semibold text-[26px] md:text-[40px] text-center'>Explore Featured Courses</h1>
                 </div>
                 <div className='grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 '>
                     <CourseCard courseDetails={topSixCourses} />
                 </div>
                 <div className='flex justify-center items-center py-4'>
-                    <button className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] font-normal text-[16px] cursor-pointer'>View All Courses <FaArrowRightLong className='inline ml-2' /></button>
+                    <Link to="/course" className='bg-[#296AD2] text-white py-3 px-6 rounded-[4px] font-normal text-[16px] cursor-pointer'>View All Courses <FaArrowRightLong className='inline ml-2' /></Link>
                 </div>
             </section>
 
@@ -286,7 +287,7 @@ function Home() {
             <section className='px-4 md:px-12 lg:px-24 h-full'>
                 <div className='flex justify-center flex-col items-center'>
                     <Heading title="Why Choose Us" />
-                    <h1 className='font-semibold text-[26px] md:text-[40px] '>Explore Yourself All Over The World</h1>
+                    <h1 className='font-semibold text-[26px] md:text-[40px] text-center'>Explore Yourself All Over The World</h1>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-6 gap-6'>
                     <WhyChooseCard />
@@ -385,7 +386,7 @@ function Home() {
                     <NewsCard newsDetails={topThree}/>
                 </div>
                 <div className='flex justify-center mt-3 items-center'>
-                    <button className='bg-[#296AD2] py-3 px-6 rounded-[4px] text-white cursor-pointer font-normal text-[16px]'>View All News <FaArrowRightLong className='inline ml-2' /> </button>
+                    <Link to="/news" className='bg-[#296AD2] py-3 px-6 rounded-[4px] text-white font-normal text-[16px]'>View All News <FaArrowRightLong className='inline ml-2' /></Link>
                 </div>
             </section>
 
@@ -409,7 +410,7 @@ function Home() {
                         </li>
                     </ul>
                     <div className=''>
-                        <button  className='bg-[#296AD2] py-3 px-6 rounded-[4px] text-white cursor-pointer font-normal text-[16px]'>Contact Us <FaArrowRightLong className='inline ml-2' /> </button>
+                        <Link to="/contact"  className='bg-[#296AD2] py-3 px-6 rounded-[4px] text-white cursor-pointer font-normal text-[16px]'>Contact Us <FaArrowRightLong className='inline ml-2' /> </Link>
                     </div>
                 </div>
 
@@ -427,7 +428,7 @@ function Home() {
             <section className='px-4 md:px-12 lg:px-24 h-full py-18'>
                 <div className='flex justify-center flex-col items-center'>
                     <Heading title="FAQ" />
-                    <h1 className='font-semibold text-[26px] md:text-[40px] pb-12'>Frequently Asked Questions</h1>
+                    <h1 className='font-semibold text-[26px] md:text-[40px] pb-12 text-center'>Frequently Asked Questions</h1>
                 </div>
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (

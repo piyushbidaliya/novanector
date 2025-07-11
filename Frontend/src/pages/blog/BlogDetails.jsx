@@ -45,7 +45,7 @@ function BlogDetails() {
               <p>{blog.description} This course is designed to provide complete beginners with a strong foundation in JavaScript, one of the most essential and widely used programming languages on the web. You’ll learn how to write basic JavaScript code and make websites interactive by working alongside HTML and CSS. Through hands-on exercises and real-world examples, you'll explore key programming concepts like variables, functions, loops, conditionals, and events. The course focuses on practical learning to help you understand how JavaScript brings web pages to life. No prior coding experience is required—just curiosity and a willingness to learn. By the end of this course, you'll have the confidence to build dynamic web pages and continue your journey in web development.</p>
 
                 <div className='flex justify-between flex-wrap gap-2 rounded-[8px] border border-[#E3E3E3] p-6'>
-                    <div className='flex gap-2 font-medium text-[14px] items-center'>
+                    <div className='flex gap-2 font-medium text-[14px] items-center flex-wrap'>
                         <p className=''>Tags:</p>
                         <p className='text-[#393939] bg-[#F1F1F1] py-2 px-3'>Education</p>
                         <p className='text-[#393939] bg-[#F1F1F1] py-2 px-3'>Branding</p>

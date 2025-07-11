@@ -16,7 +16,7 @@ function InternshipCard() {
       <div className='p-2 '>
         <h1 className='pb-4 font-medium text-[24px]'>{internship.title}</h1>
         <p className='pb-4 font-normal text-[16px] text-[#6F6F6F]'>{internship.description} <span className='text-[#296AD2] cursor-pointer'>see more...</span></p>
-        <div className='pb-4 text-[#FDC300] flex justify-center'>
+        <div className='pb-4 text-[#FDC300] flex justify-center items-center'>
             <IoIosStar />
             <IoIosStar />
             <IoIosStar />

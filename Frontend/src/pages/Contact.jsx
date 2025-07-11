@@ -111,9 +111,9 @@ function Contacts() {
           <h3 className="text-2xl mt-2 text-[#292929] font-semibold">Clear guidance, quick responses — every time</h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full pb-10">
           {/* Address */}
-          <div className="bg-blue-600 text-white rounded-lg p-6 flex flex-col items-center max-w-[240px] mx-auto">
+          <div className="bg-blue-600 text-white rounded-lg p-6 flex flex-col items-center c">
             <div className="bg-white text-blue-500 w-10 h-10 flex items-center justify-center rounded-full text-2xl mb-2">
               <GoLocation />
             </div>
@@ -122,7 +122,7 @@ function Contacts() {
           </div>
 
           {/* Phone */}
-          <div className="bg-white text-center rounded-lg p-6 shadow border border-gray-300 max-w-[240px] mx-auto">
+          <div className="bg-white text-center rounded-lg p-6 shadow border border-gray-300 w-full">
             <div className="bg-blue-100 text-blue-500 text-2xl w-10 h-10 flex items-center justify-center rounded-full mb-2 mx-auto">
               <BsTelephone />
             </div>
@@ -131,7 +131,7 @@ function Contacts() {
           </div>
 
           {/* Email */}
-          <div className="bg-white text-center rounded-lg py-6 shadow border border-gray-300 max-w-[240px] mx-auto">
+          <div className="bg-white text-center rounded-lg py-6 shadow border border-gray-300 w-full">
             <div className="bg-blue-100 text-blue-500 text-2xl w-10 h-10 flex items-center justify-center rounded-full mb-2 mx-auto">
               <CgMail />
             </div>
@@ -140,7 +140,7 @@ function Contacts() {
           </div>
 
           {/* Website */}
-          <div className="bg-white text-center rounded-lg py-6 shadow border border-gray-300 max-w-[240px] mx-auto">
+          <div className="bg-white text-center rounded-lg py-6 shadow border border-gray-300 w-full">
             <div className="bg-blue-100 text-blue-500 text-2xl w-10 h-10 flex items-center justify-center rounded-full mb-2 mx-auto">
               <CiGlobe />
             </div>
