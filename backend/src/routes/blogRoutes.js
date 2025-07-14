@@ -10,7 +10,7 @@ import {
 } from "../controllers/blogController.js";
 const router = express.Router();
 
-router.get("/", getAllBlog);
+router.get("/get", getAllBlog);
 router.post("/", uploadBlogImage, postBlog);
 router.delete("/:postId", deleteBlog);
 router.get("/:userId", getBlogById);

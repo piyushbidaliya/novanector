@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Heading from '../../component/ThunderHeading'
-import blogDetails from '../../assets/blogDetails'
+// import blogDetails from '../../assets/blogDetails'
 import BlogCard from '../../component/BlogCard'
-
+import Axios from '../../utils/Axios'
+import SummaryApi from '../../connection/SummaryApi'
 function Blog() {
+      const [blogData, setBlogData] = useState([])
+      const fetchBlog = async()=>{
+          try {
+              const response = await Axios({
+                  ...SummaryApi.getBlog
+              })
+              const {data: responseData} = response
+              setBlogData(responseData.data)
+
+          } catch (error) {
+              console.log(error)
+          }
+      }
+  
+      useEffect(()=>{
+          fetchBlog()
+      },[])
   return (
     <section className='px-4 md:px-12 lg:px-24 py-10 lg:py-18 h-full'>
         <div className='flex justify-center flex-col items-center'>
@@ -14,7 +32,7 @@ motivated with fresh content from industry experts, helping you stay ahead in yo
             <h1 className='font-medium text-[26px] md:text-[40px] pb-6'>Knowledge Center</h1>
         </div>
         <div className='grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center'>
-            <BlogCard blogDetails={blogDetails}/>
+            <BlogCard blogDetails={blogData}/>
         </div>
     </section>
   )
