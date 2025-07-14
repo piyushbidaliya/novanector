@@ -11,6 +11,7 @@ export const createAuth = async (req, res) => {
     if (!username || !email || !password) {
       return res.status(400).json({
         success: false,
+        error: true,
         message: "Username, email, and password are required.",
       });
     }
@@ -20,6 +21,7 @@ export const createAuth = async (req, res) => {
     if (password.length < 9) {
       return res.status(400).json({
         success: false,
+        error: true,
         message: "Password must be at least 9 characters long.",
       });
     }
@@ -27,6 +29,7 @@ export const createAuth = async (req, res) => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return res.status(400).json({
         success: false,
+        error: true,
         message: "Invalid email format.",
       });
     }
@@ -40,6 +43,7 @@ export const createAuth = async (req, res) => {
     ) {
       return res.status(400).json({
         success: false, // ✅ FIXED: Added consistency
+        error: true,
         message: "Invalid profile picture URL.",
       });
     }
@@ -50,6 +54,7 @@ export const createAuth = async (req, res) => {
     if (role && !validRoles.includes(role)) {
       return res.status(400).json({
         success: false, // ✅ FIXED: Added consistency
+        error: true,
         message: "Invalid role.",
       });
     }
@@ -65,6 +70,7 @@ export const createAuth = async (req, res) => {
     if (existingUser) {
       return res.status(400).json({
         success: false,
+        error: true,
         message:
           existingUser.email === email
             ? "User with this email already exists."
@@ -153,6 +159,7 @@ export const createAuth = async (req, res) => {
     console.error("Error creating user:", error);
     return res.status(500).json({
       success: false,
+      error: true,
       message: "Internal server error. Please try again later.",
     });
   }
@@ -224,6 +231,7 @@ export const loginAuth = async (req, res) => {
     if (!existingUser || !isPasswordValid) {
       return res.status(401).json({
         success: false,
+        error: true,
         message: "Invalid email or password.",
       });
     }
@@ -264,6 +272,7 @@ export const loginAuth = async (req, res) => {
     console.error("Error logging in user:", error);
     return res.status(500).json({
       success: false,
+      error: true,
       message: "Internal server error. Please try again later.",
     });
   }
