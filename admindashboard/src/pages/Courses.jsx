@@ -9,7 +9,7 @@ const Courses = () => {
       id: 1,
       title: "Full Stack Web Development",
       duration: "12 weeks",
-      description: "Covers HTML, CSS, JavaScript, React.",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
       rating: 4.8,
       price: "₹ 4,999",
@@ -17,81 +17,61 @@ const Courses = () => {
     },
     {
       id: 2,
-      title: "JavaScript Bootcamp",
-      duration: "8 weeks",
-      description: "Learn JS with real projects.",
-      lessons: 18,
-      rating: 4.7,
-      price: "₹ 3,999",
+    title: "Full Stack Web Development",
+      duration: "12 weeks",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      lessons: 20,
+      rating: 4.8,
+      price: "₹ 4,999",
       image: "/photu.jpg",
     },
     {
       id: 3,
-      title: "React Native Basics",
-      duration: "6 weeks",
-      description: "Build mobile apps using React Native.",
-      lessons: 14,
-      rating: 4.6,
-      price: "₹ 3,499",
+      title: "Full Stack Web Development",
+      duration: "12 weeks",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      lessons: 20,
+      rating: 4.8,
+      price: "₹ 4,999",
       image: "/photu.jpg",
     },
-    {
-      id: 4,
-      title: "Tailwind CSS Mastery",
-      duration: "4 weeks",
-      description: "Design beautiful responsive UIs.",
-      lessons: 10,
-      rating: 4.9,
-      price: "₹ 2,999",
-      image: "/photu.jpg",
-    },
-    {
-      id: 5,
-      title: "Node.js + Express",
-      duration: "7 weeks",
-      description: "Backend fundamentals with Node and Express.",
-      lessons: 16,
-      rating: 4.5,
-      price: "₹ 3,499",
-      image: "/photu.jpg",
-    },
-    // Add more if needed
   ];
 
   const pendingCourses = [
     {
+      id: 4,
+     title: "Full Stack Web Development",
+      duration: "12 weeks",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      lessons: 20,
+      rating: 4.8,
+      price: "₹ 4,999",
+      image: "/photu.jpg",
+    },
+    {
+      id: 5,
+    title: "Full Stack Web Development",
+      duration: "12 weeks",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      lessons: 20,
+      rating: 4.8,
+      price: "₹ 4,999",
+      image: "/photu.jpg",
+    },
+    {
       id: 6,
-      title: "Firebase + React Project",
-      duration: "5 weeks",
-      description: "Realtime app using Firebase and React.",
-      lessons: 12,
-      rating: 4.4,
-      price: "₹ 2,999",
-      image: "/photu.jpg",
-    },
-    {
-      id: 7,
-      title: "Python for Beginners",
-      duration: "9 weeks",
-      description: "Learn Python from scratch.",
-      lessons: 22,
-      rating: 4.6,
-      price: "₹ 4,199",
-      image: "/photu.jpg",
-    },
-    {
-      id: 8,
-      title: "REST API Development",
-      duration: "6 weeks",
-      description: "Create APIs with Express and MongoDB.",
-      lessons: 14,
-      rating: 4.7,
-      price: "₹ 3,899",
+     title: "Full Stack Web Development",
+      duration: "12 weeks",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      lessons: 20,
+      rating: 4.8,
+      price: "₹ 4,999",
       image: "/photu.jpg",
     },
   ];
 
-  const coursesToShow = activeTab === "published" ? publishedCourses : pendingCourses;
+  const coursesToShow =
+    activeTab === "published" ? publishedCourses : pendingCourses;
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
@@ -141,7 +121,9 @@ const Courses = () => {
               </div>
               <div className="p-4">
                 <h3 className="text-xl font-semibold">{course.title}</h3>
-                <p className="text-gray-600 mt-2 text-sm">{course.description}</p>
+                <p className="text-gray-600 mt-2 text-sm">
+                  {course.description}
+                </p>
 
                 <div className="flex items-center justify-between mt-4 text-sm">
                   <span className="flex items-center gap-1">
@@ -155,7 +137,9 @@ const Courses = () => {
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-green-600 font-bold">{course.price}</span>
+                  <span className="text-green-600 font-bold">
+                    {course.price}
+                  </span>
                   <button className="border border-blue-500 text-blue-500 px-4 py-1 rounded hover:bg-blue-500 hover:text-white transition">
                     View Detail
                   </button>
