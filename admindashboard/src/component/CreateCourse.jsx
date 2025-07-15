@@ -117,7 +117,7 @@ function CreateCourse({close, onOpenAddModule, onOpenAddLesson, onOpenAddQuiz, o
                             </div>
                             ))}
 
-                            <div className='flex gap-5 py-5 font-normal text-[14px]'>
+                            <div className='flex gap-5 py-5 font-normal text-[14px] flex-wrap'>
                                 <div onClick={onOpenAddLesson} className='cursor-pointer py-2 px-4 text-[#296AD2] border-[#296AD2] border rounded-sm flex items-center gap-2'>
                                     Lesson
                                     <PiBookOpenText/>

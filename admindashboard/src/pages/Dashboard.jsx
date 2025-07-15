@@ -126,8 +126,8 @@ function Dashboard() {
       </section>
 
       {/* Instructor + notification */}
-      <section className='py-5 flex gap-4 flex-col md:flex-row'>
-        <div className='flex border border-[#E3E3E3] rounded-[12px] py-4 px-5 w-3/4'>
+      <section className='py-5 flex gap-4 flex-col lg:flex-row'>
+        <div className='flex border border-[#E3E3E3] rounded-[12px] py-4 px-5 w-full lg:w-3/4'>
           <div className='space-y-5'>
             <div className='flex justify-between py-2 border-b border-[#EEEEEE]'>
               <h1 className='font-medium text-[20px]'>Popular Instructor</h1>
@@ -153,8 +153,8 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className='space-y-5 border border-[#E3E3E3] rounded-[12px] py-4 px-5 w-1/2'>
-            <div className='flex justify-between py-2 border-b border-[#EEEEEE]'>
+        <div className='space-y-5 border border-[#E3E3E3] rounded-[12px] py-4 px-5 w-full lg:w-1/2'>
+            <div className='flex justify-between py-2 border-b border-[#EEEEEE] items-center gap-2 flex-wrap'>
               <h1 className='font-medium text-[20px]'>Notification</h1>
               <p className='font-normal text-[16px] text-[#5F6C76]'>See More...</p>
             </div>
