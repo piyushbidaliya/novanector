@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Dashboard from "../pages/Dashboard";
+import Message from "../pages/message";
 import Courses from "../pages/Courses";
 import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
@@ -16,9 +17,15 @@ const adminRoutes = createBrowserRouter([
                 element: <Dashboard/>
             },
             {
+                path: "message",
+                element: <Message/>
+            },
+             {
+
                 path:"course",
                 element: <Courses/>
-            },{
+            },
+            {
                path:"review",
                element: <Reviews/> 
             },
