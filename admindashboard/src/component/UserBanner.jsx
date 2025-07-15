@@ -7,6 +7,7 @@ import CreateCourse from './CreateCourse'
 function UserBanner() {
     const [openNewCourse, setOpenNewCourse] = useState(false)
 
+
   return (
     <div style={{
         background: 'linear-gradient(90deg, #7F53ED 0%, #5674DB 59%, #2699C7 100%)',
@@ -28,7 +29,7 @@ function UserBanner() {
         <button onClick={()=>setOpenNewCourse(true)} className='cursor-pointer border border-white bg-[#296AD2] py-3 px-4 rounded-[12px]'>Create a New Course <FaLongArrowAltRight className='inline ml-2'/></button>
         {
             openNewCourse && (
-                <CreateCourse/>
+                <CreateCourse close={()=>setOpenNewCourse(false)}/>
             )
         }
     </div>

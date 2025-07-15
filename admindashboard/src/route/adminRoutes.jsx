@@ -40,4 +40,3 @@ const adminRoutes = createBrowserRouter([
 
 export default adminRoutes
 
-
