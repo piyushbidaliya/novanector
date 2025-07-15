@@ -9,7 +9,7 @@ const Courses = () => {
       id: 1,
       title: "Full Stack Web Development",
       duration: "12 weeks",
-      description:"Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
       rating: 4.8,
       price: "₹ 4,999",
@@ -17,10 +17,9 @@ const Courses = () => {
     },
     {
       id: 2,
-      title: "Full Stack Web Development",
+    title: "Full Stack Web Development",
       duration: "12 weeks",
-      description:
-        "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
       rating: 4.8,
       price: "₹ 4,999",
@@ -30,50 +29,45 @@ const Courses = () => {
       id: 3,
       title: "Full Stack Web Development",
       duration: "12 weeks",
-      description:
-        "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
       rating: 4.8,
-      price: "₹ 4,499",
+      price: "₹ 4,999",
       image: "/photu.jpg",
     },
   ];
 
   const pendingCourses = [
     {
-      id: 3,
-      title: "Full Stack Web Development",
+      id: 4,
+     title: "Full Stack Web Development",
       duration: "12 weeks",
-      description:
-        "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
       rating: 4.8,
-      price: "₹ 4,499",
+      price: "₹ 4,999",
       image: "/photu.jpg",
     },
     {
-      id: 3,
-      title: "Full Stack Web Development",
+      id: 5,
+    title: "Full Stack Web Development",
       duration: "12 weeks",
-      description:
-        "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
       rating: 4.8,
-      price: "₹ 4,499",
+      price: "₹ 4,999",
       image: "/photu.jpg",
     },
-     {
-      id: 3,
-      title: "Full Stack Web Development",
+    {
+      id: 6,
+     title: "Full Stack Web Development",
       duration: "12 weeks",
-      description:
-        "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
+      description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
       rating: 4.8,
-      price: "₹ 4,499",
+      price: "₹ 4,999",
       image: "/photu.jpg",
     },
-
   ];
 
   const coursesToShow =
