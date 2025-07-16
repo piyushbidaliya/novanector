@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Step 1: Import useNavigate
 import { FaStar, FaBook } from "react-icons/fa";
 
 const Courses = () => {
   const [activeTab, setActiveTab] = useState("published");
+  const navigate = useNavigate(); // ✅ Step 2: Initialize navigate
 
   const publishedCourses = [
     {
@@ -17,7 +19,7 @@ const Courses = () => {
     },
     {
       id: 2,
-    title: "Full Stack Web Development",
+      title: "Full Stack Web Development",
       duration: "12 weeks",
       description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
@@ -40,7 +42,7 @@ const Courses = () => {
   const pendingCourses = [
     {
       id: 4,
-     title: "Full Stack Web Development",
+      title: "Full Stack Web Development",
       duration: "12 weeks",
       description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
@@ -50,7 +52,7 @@ const Courses = () => {
     },
     {
       id: 5,
-    title: "Full Stack Web Development",
+      title: "Full Stack Web Development",
       duration: "12 weeks",
       description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
@@ -60,7 +62,7 @@ const Courses = () => {
     },
     {
       id: 6,
-     title: "Full Stack Web Development",
+      title: "Full Stack Web Development",
       duration: "12 weeks",
       description: "Become a proficient full-stack developer with this course covering HTML, CSS, JavaScript, React.",
       lessons: 20,
@@ -121,9 +123,7 @@ const Courses = () => {
               </div>
               <div className="p-4">
                 <h3 className="text-xl font-semibold">{course.title}</h3>
-                <p className="text-gray-600 mt-2 text-sm">
-                  {course.description}
-                </p>
+                <p className="text-gray-600 mt-2 text-sm">{course.description}</p>
 
                 <div className="flex items-center justify-between mt-4 text-sm">
                   <span className="flex items-center gap-1">
@@ -137,10 +137,11 @@ const Courses = () => {
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-green-600 font-bold">
-                    {course.price}
-                  </span>
-                  <button className="border border-blue-500 text-blue-500 px-4 py-1 rounded hover:bg-blue-500 hover:text-white transition">
+                  <span className="text-green-600 font-bold">{course.price}</span>
+                  <button
+                    onClick={() => navigate(`/course/detail`)} // ✅ Step 3: Navigate to course detail
+                    className="border border-blue-500 text-blue-500 px-4 py-1 rounded hover:bg-blue-500 hover:text-white transition"
+                  >
                     View Detail
                   </button>
                 </div>

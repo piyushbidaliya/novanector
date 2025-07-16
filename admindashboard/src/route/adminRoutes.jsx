@@ -1,61 +1,78 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Dashboard from "../pages/Dashboard";
+import CourseDetails from "../pages/CourseDetails";
 import Message from "../pages/message";
 import Courses from "../pages/Courses";
 import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
 import Category from "../pages/Category";
 import Profile from "../pages/Profile";
+import Community from "../pages/Community";
+import Coupons from "../pages/Coupons";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog/BlogDetails";
 import Event from "../pages/event/Event";
+
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <App />,
         children: [
             {
                 path: "",
-                element: <Dashboard/>
+                element: <Dashboard />
             },
             {
                 path: "message",
-                element: <Message/>
+                element: <Message />
             },
-             {
+            {
 
-                path:"course",
-                element: <Courses/>
+                path: "course",
+                element: <Courses />
             },
             {
-               path:"review",
-               element: <Reviews/> 
+                path: "course/detail",
+                element: <CourseDetails />,
             },
             {
-                path:"payment",
-                element: <Payments/>
+                path: "review",
+                element: <Reviews />
             },
             {
-                path:"category",
-                element: <Category/>
+                path: "payment",
+                element: <Payments />
             },
             {
-                path:"profile",
-                element: <Profile/>
+                path: "category",
+                element: <Category />
             },
             {
-                path:"blog",
-                element: <Blog/>
+                path: "profile",
+                element: <Profile />
+            },
+            {
+                path: "community",
+                element: <Community />
+            },
+            {
+                path: "coupons",
+                element: <Coupons />
+            },
+            {
+                path: "blog",
+                element: <Blog />
             },
             {
                 path: "blogDetails/:blogId",
-                element: <BlogDetails/>
+                element: <BlogDetails />
             },
             {
                 path: "event",
-                element: <Event/>
+                element: <Event />
             }
+
         ]
     }
 ])
