@@ -7,6 +7,8 @@ import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
 import Category from "../pages/Category";
 import Profile from "../pages/Profile";
+import Blog from "../pages/blog/Blog";
+import BlogDetails from "../pages/blog/BlogDetails";
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
@@ -40,7 +42,15 @@ const adminRoutes = createBrowserRouter([
             {
                 path:"profile",
                 element: <Profile/>
-            }
+            },
+            {
+                path:"blog",
+                element: <Blog/>
+            },
+            {
+                path: "blogDetails/:blogId",
+                element: <BlogDetails/>
+            },
         ]
     }
 ])
