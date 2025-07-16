@@ -8,8 +8,11 @@ import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
 import Category from "../pages/Category";
 import Profile from "../pages/Profile";
+import Community from "../pages/Community";
+import Coupons from "../pages/Coupons";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog/BlogDetails";
+
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
@@ -49,6 +52,13 @@ const adminRoutes = createBrowserRouter([
                 element: <Profile/>
             },
             {
+                path: "community",   
+                element: <Community />
+            },
+            {
+                path: "coupons",
+                element: <Coupons/>
+            }
                 path:"blog",
                 element: <Blog/>
             },
@@ -56,6 +66,7 @@ const adminRoutes = createBrowserRouter([
                 path: "blogDetails/:blogId",
                 element: <BlogDetails/>
             },
+
         ]
     }
 ])
