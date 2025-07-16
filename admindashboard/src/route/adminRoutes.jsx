@@ -9,6 +9,7 @@ import Category from "../pages/Category";
 import Profile from "../pages/Profile";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog/BlogDetails";
+import Event from "../pages/event/Event";
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
@@ -51,6 +52,10 @@ const adminRoutes = createBrowserRouter([
                 path: "blogDetails/:blogId",
                 element: <BlogDetails/>
             },
+            {
+                path: "event",
+                element: <Event/>
+            }
         ]
     }
 ])
