@@ -6,6 +6,8 @@ import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
 import Category from "../pages/Category";
 import Profile from "../pages/Profile";
+import Community from "../pages/Community";
+import Coupons from "../pages/Coupons";
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
@@ -33,6 +35,14 @@ const adminRoutes = createBrowserRouter([
             {
                 path:"profile",
                 element: <Profile/>
+            },
+            {
+                path: "community",   
+                element: <Community />
+            },
+            {
+                path: "coupons",
+                element: <Coupons/>
             }
         ]
     }
