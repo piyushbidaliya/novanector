@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Dashboard from "../pages/Dashboard";
+import CourseDetails from "../pages/CourseDetails";
+import Message from "../pages/message";
 import Courses from "../pages/Courses";
 import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
@@ -8,6 +10,9 @@ import Category from "../pages/Category";
 import Profile from "../pages/Profile";
 import Community from "../pages/Community";
 import Coupons from "../pages/Coupons";
+import Blog from "../pages/blog/Blog";
+import BlogDetails from "../pages/blog/BlogDetails";
+
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
@@ -18,9 +23,19 @@ const adminRoutes = createBrowserRouter([
                 element: <Dashboard/>
             },
             {
+                path: "message",
+                element: <Message/>
+            },
+             {
+
                 path:"course",
                 element: <Courses/>
-            },{
+            },
+            {
+            path: "course/detail",
+            element: <CourseDetails />,
+            },
+            {
                path:"review",
                element: <Reviews/> 
             },
@@ -44,6 +59,14 @@ const adminRoutes = createBrowserRouter([
                 path: "coupons",
                 element: <Coupons/>
             }
+                path:"blog",
+                element: <Blog/>
+            },
+            {
+                path: "blogDetails/:blogId",
+                element: <BlogDetails/>
+            },
+
         ]
     }
 ])

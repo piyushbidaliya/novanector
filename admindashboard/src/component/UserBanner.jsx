@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoStar } from 'react-icons/io5'
 import userimage from '../assets/userimage.jpg'
 import { FaLongArrowAltRight } from 'react-icons/fa'
-import CreateCourse from './CreateCourse'
 
-function UserBanner() {
-    const [openNewCourse, setOpenNewCourse] = useState(false)
-
+function UserBanner({onOpenCreateCourse}) {
 
   return (
     <div style={{
@@ -26,12 +23,7 @@ function UserBanner() {
         4.0(120 Reviews)
       </div>
 
-        <button onClick={()=>setOpenNewCourse(true)} className='cursor-pointer border border-white bg-[#296AD2] py-3 px-4 rounded-[12px]'>Create a New Course <FaLongArrowAltRight className='inline ml-2'/></button>
-        {
-            openNewCourse && (
-                <CreateCourse close={()=>setOpenNewCourse(false)}/>
-            )
-        }
+        <button onClick={onOpenCreateCourse} className='cursor-pointer border border-white bg-[#296AD2] py-3 px-4 rounded-[12px]'>Create a New Course <FaLongArrowAltRight className='inline ml-2'/></button>
     </div>
   )
 }

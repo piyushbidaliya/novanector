@@ -1,11 +1,22 @@
-import React from 'react'
-import { FaAngleDown } from "react-icons/fa6";
+import React, { useState } from 'react'
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { FiUpload } from "react-icons/fi";
-import { IoClose } from 'react-icons/io5'
-function CreateCourse({close}) {
+import { IoAdd, IoClose } from 'react-icons/io5'
+import { MdDeleteOutline, MdOutlineNoteAlt, MdOutlineQuiz } from 'react-icons/md';
+import { BiEdit } from "react-icons/bi";
+import { PiBookOpenText } from 'react-icons/pi';
+
+const coursemodule = [
+    {title: "Introduction to JavaScript: What It Is and Why It Matters"},
+    {title: "Introduction to JavaScript: What It Is and Why It Matters"},
+    {title: "Introduction to JavaScript: What It Is and Why It Matters"},
+]
+
+function CreateCourse({close, onOpenAddModule, onOpenAddLesson, onOpenAddQuiz, onOpenAddAssignment}) {
+
     return (
         <>
-            <div className='absolute bg-white text-[#292929] top-23 left-4 right-4 md:left-12 md:right-10 lg:left-89 lg:right-20'>
+            <div className='absolute bg-white text-[#292929] top-23 left-4 right-4 md:left-12 md:right-10 lg:left-89 lg:right-20 z-50'>
                 <form action="" className='space-y-6'>
                     <div className='p-5 border border-[#E3E3E3] rounded-[8px] space-y-6'>
                         <IoClose className='float-right cursor-pointer' onClick={close}/>
@@ -85,7 +96,45 @@ function CreateCourse({close}) {
                     </div>
 
                     {/* Course Module */}
+                    <div className='p-5 border border-[#E3E3E3] rounded-[8px] space-y-6'>
+                        <div className='flex justify-between items-center p-5'>
+                            <h1 className='font-medium text-[20px]'>Course Module</h1>
+                            <FaAngleDown />
+                        </div>
+                        <div>
+                            <div className='flex justify-between items-center p-5 border border-[#E3E3E3]'>
+                                <p className='font-semibold text-[16px]'>Introduction to web development</p>
+                                <FaAngleUp />
+                            </div>
+                            {coursemodule.map((data, index)=>(
 
+                            <div key={index} className='flex justify-between items-center p-5 border border-[#E3E3E3]'>
+                                <p className='font-normal text-[16px]'>{data.title}</p>
+                                <div className='flex gap-3 items-center'>
+                                    <BiEdit className='w-5 h-5'/>
+                                    <MdDeleteOutline className='w-5 h-5'/>
+                                </div>
+                            </div>
+                            ))}
+
+                            <div className='flex gap-5 py-5 font-normal text-[14px] flex-wrap'>
+                                <div onClick={onOpenAddLesson} className='cursor-pointer py-2 px-4 text-[#296AD2] border-[#296AD2] border rounded-sm flex items-center gap-2'>
+                                    Lesson
+                                    <PiBookOpenText/>
+                                </div>
+                                <div onClick={onOpenAddQuiz} className='cursor-pointer py-2 px-4 text-[#296AD2] border-[#296AD2] border rounded-sm flex items-center gap-2'>
+                                    Quiz
+                                    <MdOutlineQuiz/>
+                                </div>
+                                <div onClick={onOpenAddAssignment} className='cursor-pointer py-2 px-4 text-[#296AD2] border-[#296AD2] border rounded-sm flex items-center gap-2'>
+                                    Assignment
+                                    <MdOutlineNoteAlt />
+                                </div>
+                            </div>
+
+                            <button type='button' onClick={onOpenAddModule} className='py-2.5 px-5 rounded-[8px] bg-[#296AD2] text-white font-normal text-[14px] cursor-pointer'>Add New Module +</button>
+                        </div>
+                    </div>
 
 
                     {/*Additional Information*/}
@@ -149,8 +198,6 @@ function CreateCourse({close}) {
                 </form>
 
             </div>
-
-
         </>
     )
 }

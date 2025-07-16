@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import { IoClose, IoSearch } from "react-icons/io5";
-import { MdMenu } from 'react-icons/md';
+import { MdMenu, MdOutlineNotificationsNone } from 'react-icons/md';
 import Sidebar from './Sidebar';
 
 function Header() {
@@ -17,8 +17,10 @@ function Header() {
             <Link to="/search">
                 <IoSearch className='w-5 h-5'/>
             </Link>
+              <Link to="/notification">
+                <MdOutlineNotificationsNone className='w-6 h-6'/>
+            </Link>
                 <div className='hidden lg:flex gap-4.5 text-[16px]'>
-                    <button className='px-6 py-1 text-[#296AD2] rounded-[8px] border border-[#296AD2] cursor-pointer'>Sign Up</button>
                     <button className='px-6 py-1 bg-[#296AD2] text-white rounded-[8px] cursor-pointer'>Login</button>
                 </div>
                 {
