@@ -13,6 +13,7 @@ import Coupons from "../pages/Coupons";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog/BlogDetails";
 import Event from "../pages/event/Event";
+import ApproveCourses from "../pages/ApprovedCourses";
 
 const adminRoutes = createBrowserRouter([
     {
@@ -71,6 +72,9 @@ const adminRoutes = createBrowserRouter([
             {
                 path: "event",
                 element: <Event />
+            }, {
+                path: "/approve",
+                element: <ApproveCourses />
             }
 
         ]
