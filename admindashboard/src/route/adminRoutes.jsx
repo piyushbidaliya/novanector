@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Dashboard from "../pages/Dashboard";
+import CourseDetails from "../pages/CourseDetails";
 import Message from "../pages/message";
 import Courses from "../pages/Courses";
 import Reviews from "../pages/Reviews";
@@ -26,6 +27,10 @@ const adminRoutes = createBrowserRouter([
 
                 path:"course",
                 element: <Courses/>
+            },
+            {
+            path: "course/detail",
+            element: <CourseDetails />,
             },
             {
                path:"review",
