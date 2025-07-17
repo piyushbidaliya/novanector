@@ -68,11 +68,6 @@ const adminRoutes = createBrowserRouter([
                 element: <Coupons/>
             },
             {
-                path:"blog",
-                element: <Blog/>
-                element: <Coupons />
-            },
-            {
                 path: "blog",
                 element: <Blog />
             },
