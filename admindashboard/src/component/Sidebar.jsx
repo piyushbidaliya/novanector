@@ -27,7 +27,7 @@ const navItems = [
   { icon: <IoNewspaperOutline />, path: "/news", name: "News" },
   { icon: <HiOutlineUserGroup />, path: "/community", name: "Community" },
   { icon: <RiCoupon3Line />, path: "/coupons", name: "Coupons" },
-  { icon: <LiaIdCard />, path: "/create", name: "Create Instructor ID" },
+  { icon: <LiaIdCard />, path: "/create-instructor", name: "Create Instructor ID" },
   { icon: <TbSettings />, path: "/setting", name: "Setting" },
   { icon: <MdOutlineLogout />, path: "/logout", name: "Logout" },
 
