@@ -17,6 +17,7 @@ import EventDetails from "../pages/event/EventDetails";
 import News from "../pages/news/News";
 import NewsDetails from "../pages/news/NewsDetails";
 import QuizAttempt from "../pages/QuizAttempt";
+import ApproveCourses from "../pages/ApprovedCourses";
 
 const adminRoutes = createBrowserRouter([
     {
@@ -91,6 +92,9 @@ const adminRoutes = createBrowserRouter([
             {
                 path: "quiz",
                 element: <QuizAttempt/>
+            }, {
+                path: "/approve",
+                element: <ApproveCourses />
             }
 
         ]
