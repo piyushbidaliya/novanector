@@ -10,6 +10,7 @@ import Course from "../pages/course/Course";
 import CourseDetails from "../pages/course/CourseDetails";
 import Setting from "../pages/setting";
 import Notifications from "../pages/Notifications";
+import Announcement from "../pages/Announcement";
 
 const instructorRoutes = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const instructorRoutes = createBrowserRouter([
             {
                 path: "notification",
                 element: <Notifications/>
+            },
+            {
+                path: "announcement",
+                element: <Announcement/>
             }
         ]
     }
