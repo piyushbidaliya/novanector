@@ -129,7 +129,7 @@ function Dashboard() {
       <section className='py-5 flex gap-4 flex-col lg:flex-row'>
         <div className='flex border border-[#E3E3E3] rounded-[12px] py-4 px-5 w-full lg:w-3/4'>
           <div className='space-y-5'>
-            <div className='flex justify-between py-2 border-b border-[#EEEEEE]'>
+            <div className='flex justify-between py-2 border-b border-[#EEEEEE] items-center gap-2 flex-wrap'>
               <h1 className='font-medium text-[20px]'>Popular Instructor</h1>
               <p className='font-normal text-[16px] text-[#5F6C76]'>See More...</p>
             </div>
@@ -169,7 +169,7 @@ function Dashboard() {
 
       {/* Recent Feedbacks */}
       <section className='w-full border border-[#E3E3E3] rounded-md p-5 my-5 space-y-4'>
-        <div className='flex justify-between py-2 border-b border-[#EEEEEE]'>
+        <div className='flex justify-between py-2 border-b border-[#EEEEEE] items-center gap-2 flex-wrap'>
           <h1 className='font-medium text-[20px]'>Recent Feedbacks</h1>
           <p className='font-normal text-[16px] text-[#5F6C76]'>See More...</p>
         </div>

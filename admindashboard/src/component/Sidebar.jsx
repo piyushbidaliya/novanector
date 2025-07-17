@@ -33,7 +33,7 @@ const navItems = [
 
 ]
 
-function Sidebar({ containerStyle }) {
+function Sidebar({ containerStyle, close }) {
   return (
     <nav className={`${containerStyle}`}>
       <div className="space-y-3">
@@ -44,6 +44,7 @@ function Sidebar({ containerStyle }) {
             )}
 
             <NavLink
+              onClick={close}
               to={item.path}
               className={({ isActive }) =>
                 `flex gap-3 items-center px-4 py-2 rounded-md transition-colors duration-200 ${isActive

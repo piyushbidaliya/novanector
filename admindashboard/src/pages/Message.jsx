@@ -85,7 +85,7 @@ function Message() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between px-4 py-3 border rounded-md ">
+        <div className="flex items-center justify-between px-4 py-3 border rounded-md flex-wrap">
           <div className="flex items-center flex-grow space-x-2">
             <MdInsertLink className="text-2xl text-gray-500" />
             <input

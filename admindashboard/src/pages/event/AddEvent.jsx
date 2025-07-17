@@ -29,22 +29,31 @@ function AddEvent({close}) {
                     </div>
 
                     <div className='flex flex-col'>
-                        <label htmlFor="" className='font-normal text-[14px]'>Event Instructor</label>
-                        <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
+                        <label htmlFor="" className='font-normal text-[14px]'>Requirements</label>
+                        <textarea cols={4} type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none resize-none' />
                     </div>
                     <div className='flex flex-col'>
-                        <label htmlFor="" className='font-normal text-[14px]'>Add Tags</label>
-                        <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
+                        <label htmlFor="" className='font-normal text-[14px]'>Learning Outcomes</label>
+                        <textarea cols={4} type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none resize-none' />
                     </div>
 
+                    <div className='flex flex-col'>
+                        <label className='font-normal text-[14px]'>Event Speakers</label>
+                        <input type='text' className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
+                    </div>
+
+                    <div className='flex flex-col'>
+                        <label className='font-normal text-[14px]'>Date</label>
+                        <input type='text' className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
+                    </div>
                     
                     <div className='flex gap-4 flex-wrap'>
                         <div className='flex flex-col flex-1'>
-                            <label htmlFor="" className='font-normal text-[14px]'>Date</label>
+                            <label htmlFor="" className='font-normal text-[14px]'>Start Time</label>
                             <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
                         </div>
                         <div className='flex flex-col flex-1'>
-                            <label htmlFor="" className='font-normal text-[14px]'>Time</label>
+                            <label htmlFor="" className='font-normal text-[14px]'>End Time</label>
                             <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
                         </div>
                     </div>
@@ -55,22 +64,13 @@ function AddEvent({close}) {
                     </div>
 
                     <div className='flex flex-col'>
-                        <label htmlFor="" className='font-normal text-[14px]'>Language</label>
+                        <label htmlFor="" className='font-normal text-[14px]'>Location</label>
                         <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
                     </div>
 
-                    <div className='flex flex-col '>
-                        <p className='font-normal text-[14px]'>Social Network</p>
-                        <label htmlFor="" className='space-y-4'>
-                            <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' placeholder='Dribble'/>
-                            <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' placeholder='LinkedIn'/>
-                            <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' placeholder='Facebook'/>
-                            <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' placeholder='Twitter'/>
-                        </label>
-                    </div>
                     
                     <div className='flex flex-col'>
-                        <label htmlFor="" className='font-normal text-[14px]'>Review</label>
+                        <label htmlFor="" className='font-normal text-[14px]'>Estimated Seats</label>
                         <input type="text" className='border border-[#E3E3E3] p-4 w-full rounded-lg outline-none' />
                     </div>
 

@@ -13,6 +13,10 @@ import Coupons from "../pages/Coupons";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog/BlogDetails";
 import Event from "../pages/event/Event";
+import EventDetails from "../pages/event/EventDetails";
+import News from "../pages/news/News";
+import NewsDetails from "../pages/news/NewsDetails";
+import QuizAttempt from "../pages/QuizAttempt";
 
 const adminRoutes = createBrowserRouter([
     {
@@ -71,6 +75,22 @@ const adminRoutes = createBrowserRouter([
             {
                 path: "event",
                 element: <Event />
+            },
+            {
+                path: "eventDetails/:eventId",
+                element: <EventDetails />
+            },
+            {
+                path: "news",
+                element: <News />
+            },
+            {
+                path: "newsDetails/:newsId",
+                element: <NewsDetails />
+            },
+            {
+                path: "quiz",
+                element: <QuizAttempt/>
             }
 
         ]
