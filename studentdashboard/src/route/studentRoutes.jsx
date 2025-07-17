@@ -7,6 +7,9 @@ import Community from "../pages/Community";
 import MyQuiz from "../pages/MyQuiz";
 import OrderHistory from "../pages/OrderHistory";
 import Course from "../pages/Course";
+import Setting from "../pages/setting";
+import Wishlist from "../pages/Wishlist";
+import Notifications from "../pages/Notifications";
 
 const studentRoutes = createBrowserRouter([
     {
@@ -40,6 +43,18 @@ const studentRoutes = createBrowserRouter([
             {
                 path: "course",
                 element: <Course/>
+            },
+            {
+                path: "setting",
+                element: <Setting/>
+            },
+            {
+                path: "wishlist",
+                element: <Wishlist/>
+            },
+            {
+                path: "notification",
+                element: <Notifications/>
             }
         ]
 

@@ -5,7 +5,7 @@ const EditCourseModal = ({ isOpen, onClose, course }) => {
   if (!isOpen || !course) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-30 flex items-start justify-center z-50 overflow-y-scroll pt-10 pb-10">
+    <div className="fixed inset-0 bg-black/50 flex items-start justify-center z-50 overflow-y-scroll pt-10 pb-10">
       <div className="bg-white rounded-xl p-6 w-[95%] max-w-6xl shadow-lg relative space-y-6">
     
         <button

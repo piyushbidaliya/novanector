@@ -36,22 +36,9 @@ const ApproveCourses = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen flex flex-col gap-6">
-    
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl p-6 flex justify-between items-center text-white shadow">
-        <div>
-          <h2 className="text-xl font-semibold">Hello</h2>
-          <h1 className="text-2xl font-bold">Michele Obama</h1>
-        </div>
-        <div className="text-right">
-          <p className="text-sm">⭐ 4.0 (120 Reviews)</p>
-          <button className="mt-2 px-4 py-2 bg-white text-blue-600 font-medium rounded-lg">
-            Create a New Course →
-          </button>
-        </div>
-      </div>
+    <div className="py-6 min-h-screen flex flex-col gap-6">
 
-      <div className="bg-white rounded-xl shadow p-6">
+      <div className="bg-white rounded-xl shadow p-6 overflow-auto">
         <h2 className="text-xl font-semibold mb-4">Approve Courses</h2>
         <table className="w-full text-left">
           <thead>

@@ -129,7 +129,7 @@ const Setting = () => {
                         </div>
 
                     </div>
-                    <button className='cursor-pointer bg-blue-600 text-white rounded-md p-2'>
+                    <button className='bg-blue-600 text-white rounded-md p-2 cursor-pointer'>
                         Update Social Links
                     </button>
                 </form>
