@@ -12,6 +12,8 @@ import Community from "../pages/Community";
 import Coupons from "../pages/Coupons";
 import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog/BlogDetails";
+import CreateInstructor from "../pages/CreateInstructor";
+import Notifications from "../pages/Notifications";
 
 const adminRoutes = createBrowserRouter([
     {
@@ -58,7 +60,8 @@ const adminRoutes = createBrowserRouter([
             {
                 path: "coupons",
                 element: <Coupons/>
-            }
+            },
+            {
                 path:"blog",
                 element: <Blog/>
             },
@@ -66,7 +69,14 @@ const adminRoutes = createBrowserRouter([
                 path: "blogDetails/:blogId",
                 element: <BlogDetails/>
             },
-
+            {
+                 path: "create-instructor",
+                 element: <CreateInstructor />
+            },
+            {
+                 path: '/notification',
+                 element: <Notifications />
+            },
         ]
     }
 ])

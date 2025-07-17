@@ -5,9 +5,9 @@ export default function Community() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row h-screen bg-gray-100">
       {/* Sidebar Section */}
-      <div className="w-1/3 border-r bg-white p-4">
+      <div className="w-full md:w-1/3 border-r bg-white p-4">
         <h1 className="text-xl font-bold mb-4">Community</h1>
         <button
           onClick={() => setIsModalOpen(true)}
@@ -36,7 +36,7 @@ export default function Community() {
       </div>
 
       {/* Chat Section */}
-      <div className="w-2/3 p-6 flex flex-col">
+      <div className="w-full md:w-2/3 p-4 md:p-6 flex flex-col">
         {/* Chat Header */}
         <div className="flex items-center mb-4 border-b pb-3">
           <img
@@ -51,7 +51,7 @@ export default function Community() {
         </div>
 
         {/* Chat Messages */}
-        <div className="flex-1 bg-gray-50 p-4 rounded overflow-y-auto">
+        <div className="flex-1 bg-gray-50 p-4 rounded overflow-y-auto max-h-[60vh]">
           <div className="mb-4">
             <p className="font-semibold">Joe Bartmann</p>
             <p className="text-gray-700">
@@ -77,7 +77,7 @@ export default function Community() {
           <input
             type="text"
             placeholder="Reply message..."
-            className="flex-1 p-2 outline-none"
+            className="flex-1 p-2 outline-none text-sm md:text-base"
           />
           <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
             Send
