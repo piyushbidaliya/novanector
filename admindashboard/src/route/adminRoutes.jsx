@@ -7,6 +7,7 @@ import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
 import Category from "../pages/Category";
 import Profile from "../pages/Profile";
+import Setting from "../pages/setting";
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
@@ -40,6 +41,10 @@ const adminRoutes = createBrowserRouter([
             {
                 path:"profile",
                 element: <Profile/>
+            },
+            {
+                path:"setting",
+                element: <Setting/>
             }
         ]
     }
