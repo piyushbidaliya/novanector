@@ -14,47 +14,49 @@ import Blog from "../pages/blog/Blog";
 import BlogDetails from "../pages/blog/BlogDetails";
 import CreateInstructor from "../pages/CreateInstructor";
 import Notifications from "../pages/Notifications";
+import Event from "../pages/event/Event";
+import ApproveCourses from "../pages/ApprovedCourses";
 
 const adminRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <App />,
         children: [
             {
                 path: "",
-                element: <Dashboard/>
+                element: <Dashboard />
             },
             {
                 path: "message",
-                element: <Message/>
+                element: <Message />
             },
-             {
+            {
 
-                path:"course",
-                element: <Courses/>
+                path: "course",
+                element: <Courses />
             },
             {
-            path: "course/detail",
-            element: <CourseDetails />,
+                path: "course/detail",
+                element: <CourseDetails />,
             },
             {
-               path:"review",
-               element: <Reviews/> 
+                path: "review",
+                element: <Reviews />
             },
             {
-                path:"payment",
-                element: <Payments/>
+                path: "payment",
+                element: <Payments />
             },
             {
-                path:"category",
-                element: <Category/>
+                path: "category",
+                element: <Category />
             },
             {
-                path:"profile",
-                element: <Profile/>
+                path: "profile",
+                element: <Profile />
             },
             {
-                path: "community",   
+                path: "community",
                 element: <Community />
             },
             {
@@ -64,10 +66,15 @@ const adminRoutes = createBrowserRouter([
             {
                 path:"blog",
                 element: <Blog/>
+                element: <Coupons />
+            },
+            {
+                path: "blog",
+                element: <Blog />
             },
             {
                 path: "blogDetails/:blogId",
-                element: <BlogDetails/>
+                element: <BlogDetails />
             },
             {
                  path: "create-instructor",
@@ -77,6 +84,14 @@ const adminRoutes = createBrowserRouter([
                  path: '/notification',
                  element: <Notifications />
             },
+            {
+                path: "event",
+                element: <Event />
+            }, {
+                path: "/approve",
+                element: <ApproveCourses />
+            }
+
         ]
     }
 ])
