@@ -13,11 +13,8 @@ const Setting = () => {
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`px-4 py-2 text-sm sm:text-base ${
-                            activeTab === tab
-                                ? 'border-b-2 border-blue-500 text-black font-semibold'
-                                : 'text-gray-600'
-                        }`}
+                        className={`px-4 py-2 text-sm sm:text-base ${activeTab === tab ? 'border-b-2 border-blue-500 text-black font-semibold' : 'text-gray-600'
+                            }`}
                     >
                         {tab}
                     </button>
@@ -62,7 +59,7 @@ const Setting = () => {
 
                     <div>
                         <label htmlFor="bio">Bio</label>
-                        <input id="bio" placeholder="Add your Quary" className="w-full border border-gray-400 rounded-md p-2 mt-1" rows={4} />
+                        <input id="bio" placeholder="Add your Quary" className="w-full border border-gray-400 text-start p-10  mt-1" />
                     </div>
 
                     <button type="submit" className="bg-blue-600 hover:bg-blue-700 transition text-white py-2 px-4 rounded-md">
@@ -130,7 +127,11 @@ const Setting = () => {
                             <label htmlFor="github">GitHub</label>
                             <input id="github" type="url" placeholder="https://github.com/" className="w-full border border-gray-400 rounded-md p-1 mt-1" />
                         </div>
+
                     </div>
+                    <button className='bg-blue-600 text-white rounded-md p-2'>
+                        Update Social Links
+                    </button>
                 </form>
             )}
         </div>
