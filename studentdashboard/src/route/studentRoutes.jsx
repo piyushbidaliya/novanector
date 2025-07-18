@@ -10,6 +10,7 @@ import Course from "../pages/Course";
 import Setting from "../pages/setting";
 import Wishlist from "../pages/Wishlist";
 import Notifications from "../pages/Notifications";
+import Assignments from "../pages/Assignments";
 
 const studentRoutes = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const studentRoutes = createBrowserRouter([
             {
                 path: "notification",
                 element: <Notifications/>
+            },
+            {
+                path: "assignments",
+                element: <Assignments/>
             }
         ]
 

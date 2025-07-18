@@ -8,7 +8,7 @@ function UserBanner({onOpenCreateCourse}) {
   return (
     <div style={{
         background: 'linear-gradient(90deg, #7F53ED 0%, #5674DB 59%, #2699C7 100%)',
-        }} className='flex justify-center md:justify-between bg-red-500 w-full py-12 px-6 rounded-[12px] items-center text-white flex-col md:flex-row gap-4'
+        }} className='flex justify-center md:justify-between bg-red-500 w-full py-6 md:py-12 px-6 rounded-[12px] items-center text-white flex-col md:flex-row gap-4'
     >
       <div className='flex flex-col md:flex-row items-center gap-3'>
         <div className='bg-white rounded-full p-1 w-22 h-22'><img src={userimage} alt="" className='w-20 h-20 rounded-full'/></div>
