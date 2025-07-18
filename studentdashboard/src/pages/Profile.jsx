@@ -21,7 +21,7 @@ const Profile = () => {
   );
 
   return (
-    <div className="p-6 bg-white min-h-screen">
+    <div className="py-6 bg-white min-h-screen">
       <table className="table-auto w-full border border-blue-500">
         <thead>
           <tr className="bg-blue-200 text-left">
