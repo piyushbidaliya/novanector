@@ -10,55 +10,60 @@ import Course from "../pages/Course";
 import Setting from "../pages/setting";
 import Wishlist from "../pages/Wishlist";
 import Notifications from "../pages/Notifications";
+import Referral from "../pages/Referral";
+
 
 const studentRoutes = createBrowserRouter([
-    {
-        path: "/",
-        element: <App/>,
-        children: [
-            {
-                path: "",
-                element: <Dashboard/>
-            },
-            {
-                path: "profile",
-                element: <Profile/>
-            },
-            {
-                path: "message",
-                element: <Message/>
-            },
-            {
-                path: "community",
-                element: <Community/>
-            },
-            {
-                path: "quiz",
-                element: <MyQuiz/>
-            },
-            {
-                path: "order",
-                element: <OrderHistory/>
-            },
-            {
-                path: "course",
-                element: <Course/>
-            },
-            {
-                path: "setting",
-                element: <Setting/>
-            },
-            {
-                path: "wishlist",
-                element: <Wishlist/>
-            },
-            {
-                path: "notification",
-                element: <Notifications/>
-            }
-        ]
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "",
+        element: <Dashboard />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "message",
+        element: <Message />,
+      },
+      {
+        path: "community",
+        element: <Community />,
+      },
+      {
+        path: "quiz",
+        element: <MyQuiz />,
+      },
+      {
+        path: "order",
+        element: <OrderHistory />,
+      },
+      {
+        path: "course",
+        element: <Course />,
+      },
+      {
+        path: "setting",
+        element: <Setting />,
+      },
+      {
+        path: "wishlist",
+        element: <Wishlist />,
+      },
+      {
+        path: "notification",
+        element: <Notifications />,
+      },
+      {
+        path: "referral",
+        element: <Referral />,
+      },
+    ],
+  },
+]);
 
-    }
-])
-
-export default studentRoutes
+export default studentRoutes;
