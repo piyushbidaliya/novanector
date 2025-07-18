@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Dashboard from "../pages/Dashboard";
 import CourseDetails from "../pages/CourseDetails";
-import Message from "../pages/message";
 import Courses from "../pages/Courses";
 import Reviews from "../pages/Reviews";
 import Payments from "../pages/Payments";
@@ -21,6 +20,7 @@ import News from "../pages/news/News";
 import NewsDetails from "../pages/news/NewsDetails";
 import QuizAttempt from "../pages/QuizAttempt";
 import ApproveCourses from "../pages/ApprovedCourses";
+import Message from "../pages/Message"
 
 const adminRoutes = createBrowserRouter([
     {
