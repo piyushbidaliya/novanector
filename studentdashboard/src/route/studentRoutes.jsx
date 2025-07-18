@@ -10,6 +10,7 @@ import Course from "../pages/Course";
 import Setting from "../pages/setting";
 import Wishlist from "../pages/Wishlist";
 import Notifications from "../pages/Notifications";
+import Referral from "../pages/Referral";
 import Assignments from "../pages/Assignments";
 
 const studentRoutes = createBrowserRouter([
@@ -60,10 +61,14 @@ const studentRoutes = createBrowserRouter([
             {
                 path: "assignments",
                 element: <Assignments/>
-            }
+            },
+            {
+              path: "referral",
+              element: <Referral />,
+            },
         ]
+      }
+    ])
 
-    }
-])
 
-export default studentRoutes
+export default studentRoutes;
