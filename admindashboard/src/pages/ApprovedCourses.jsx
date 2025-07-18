@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaEdit } from "react-icons/fa";
-import EditCourseModal from "../component/EditCourseModal";
+import EditCourseModal from "../component/EditCoursemodal";
 
 const courseData = [
   { name: "Learning JavaScript with imagination", price: "₹ 4,999", status: "Approved" },
